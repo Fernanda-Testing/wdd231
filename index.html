@@ -39,30 +39,39 @@
 
     <main>
         <h1>Home</h1>
-        <section class="about-me">
-            <h2>About Me</h2>
-            <p>
-                I've been testing software for almost four years, both for web and mobile applications—something I
-                thoroughly enjoy. I'm
-                passionate about ensuring the quality of what's delivered to the end user, especially when it's
-                accessible to everyone.
-                I enjoy challenges, and in the world of software, new ones are always emerging. Over time, I've realized
-                the importance
-                of evolving alongside technology, which led me to pursue a Bachelor's degree in Software Development at
-                BYU-Idaho
-                through Pathway Connect Worldwide. This experience has helped me discover how much I enjoy learning how
-                software works
-                and how to make it look more attractive and well-crafted. I believe that by studying and putting each
-                challenge into
-                practice, I can become a better QA professional and, in the near future, a better web designer.
-            </p>
+        <div class="about-me-with-photo">
+            <section class="about-me">
+                <h2>About Me</h2>
+                <p>
+                    I've been testing software for almost four years, both for web and mobile applications—something I
+                    thoroughly enjoy. I'm
+                    passionate about ensuring the quality of what's delivered to the end user, especially when it's
+                    accessible to everyone.
+                    I enjoy challenges, and in the world of software, new ones are always emerging. Over time, I've
+                    realized
+                    the importance
+                    of evolving alongside technology, which led me to pursue a Bachelor's degree in Software Development
+                    at
+                    BYU-Idaho
+                    through Pathway Connect Worldwide. This experience has helped me discover how much I enjoy learning
+                    how
+                    software works
+                    and how to make it look more attractive and well-crafted. I believe that by studying and putting
+                    each
+                    challenge into
+                    practice, I can become a better QA professional and, in the near future, a better web designer.
+                </p>
 
-        </section>
+            </section>
 
-        <section class="student">
-            <h2>Student Photo</h2>
-            <img src="images/fernanda.webp" alt="Fernanda's profile photo">
-        </section>
+            <section class="student">
+                <h2>Student Photo</h2>
+                <picture>
+                    <source srcset="images/fernanda.webp" media="(min-width: 332px)">
+                    <img src="images/fernanda.webp" alt="Fernanda's profile photo" width="332" height="420">
+                </picture>
+            </section>
+        </div>
 
         <section class="web-certificate">
             <h2>Web Certificate Courses</h2>
@@ -78,7 +87,9 @@
             </ul>
             <p>The total credits for course listed above is 6</p>
         </section>
+    </main>
 
+    <footer>
         <div class="social-pages">
             <a href="https://linkedin.com/in/fernanda-souza-f" target="_blank"><img src="images/linkedin.svg"
                     alt="Linkedin" width="48" height="48"></a>
@@ -87,10 +98,6 @@
             <a href="https://instagram.com/fernanda_souza_f" target="_blank"><img src="images/instagram.svg"
                     alt="Instagram" width="48" height="48"></a>
         </div>
-
-    </main>
-
-    <footer>
         <p>&copy;<span id="currentyear"></span> •​ Fernanda Souza • Montevideo, Uruguay</p>
         <p id="lastModified"></p>
     </footer>

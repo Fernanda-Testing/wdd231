@@ -92,7 +92,7 @@ h1 {
 
 /* ------------- MAIN -------------------- */
 
-h2{
+h2 {
     text-align: center;
     background-color: var(--primary-color);
     color: var(--secondary-color);
@@ -101,23 +101,23 @@ h2{
 
 /* ------------- About Me Section -------------------- */
 
-.about-me{
+.about-me {
     padding: 5px;
     margin: 5px;
 }
 
-.about-me p{
+.about-me p {
     background-color: var(--accent3-color);
     padding: 5px 5px 40px;
 }
 
 /* ------------- Student photo Section -------------------- */
 
-.student{
+.student {
     padding: 5px;
 }
 
-.student img{
+.student img {
     padding: 20px 60px 20px 60px;
     height: auto;
     width: 100%;
@@ -125,7 +125,7 @@ h2{
 
 /* ------------- Web Certificate Courses Section -------------------- */
 
-.web-certificate{
+.web-certificate {
     padding: 5px;
 }
 
@@ -133,33 +133,35 @@ h2{
     text-align: center;
 }
 
-.courses{
+.courses {
     display: flex;
     gap: 5px;
-    padding: 5px;    
-    justify-content:space-around;
+    padding: 5px;
+    justify-content: space-around;
 }
 
-.courses li{
+.courses li {
     border: solid 1px var(--primary-color);
     background-color: var(--accent1-color);
     padding: 5px;
     text-align: center;
 }
 
-#course-general{
+#course-general {
     list-style-type: none;
     font-weight: bold;
 }
 
-#course-general li{
+#course-general li {
     border-radius: 8px;
 }
 
-#course-num{
+#course-num {
     flex-direction: column;
     list-style-type: none;
 }
+
+/* ------------- FOOTER  -------------------- */
 
 /* ------------- Social Pages -------------------- */
 
@@ -188,10 +190,9 @@ h2{
     background-color: #ddd;
 }
 
-/* ------------- FOOTER  -------------------- */
-
-footer {
+footer p {
     background-color: var(--accent2-color);
     padding: 1rem 5px;
     text-align: center;
+    line-height: .5px;
 }

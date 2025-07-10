@@ -1,16 +1,15 @@
 @media only screen and (min-width: 900px) {
 
-    header,
+    /* header,
     main,
     nav,
     footer {
-        /* max-width: 900px; */
         margin: 0 auto;
-    }
+    } */
 
-    header {
+    /* header {
         grid-template-columns: 24px auto;
-    }
+    } */
 
     .hamburguer {
         display: none;
@@ -27,4 +26,16 @@
             flex: 1 1 100%;
         }
     }
-}
+
+    .about-me-with-photo {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+    }
+
+        picture img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
