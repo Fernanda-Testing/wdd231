@@ -10,40 +10,40 @@
 
     .navigation ul {
         display: flex;
-
-        li {
-            flex: 1 1 100%;
-        }
     }
 
-    .about-me-with-photo {
-        display: flex;
-        flex-direction: row;
-        align-items: stretch;
-        gap: 40px;
+    .navigation ul li {
+        flex: 1 1 100%;
     }
+}
 
-    .about-me,
-    .student {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: stretch;
-    }
+.about-me-with-photo {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 40px;
+}
 
-    .student picture,
-    .student img {
-        width: 100%;
-        max-width: 300px;
-        height: auto;
-        margin: 10px auto;
-        display: block;
-    }
+.about-me,
+.student {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+}
 
-    .wrapper {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 5px;
-    }
+.student picture,
+.student img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin: 10px auto;
+    display: block;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5px;
 }
