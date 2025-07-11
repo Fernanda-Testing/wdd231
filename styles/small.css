@@ -88,7 +88,7 @@ header img {
     color: var(--primary-color);
 }
 
-.current {
+.navigation a.current {
     background-color: var(--accent1-color);
     color: var(--primary-color);
 }
