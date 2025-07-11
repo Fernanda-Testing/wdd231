@@ -109,9 +109,14 @@ h2 {
 
 /* ------------- About Me Section -------------------- */
 
+.about-me-with-photo {
+    display: block;
+}
+
 .about-me,
 .student {
     background-color: var(--accent2-color);
+    margin-bottom: 10px;
 }
 
 .about-me p {
