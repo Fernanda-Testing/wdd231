@@ -1,16 +1,5 @@
 @media only screen and (min-width: 900px) {
 
-    /* header,
-    main,
-    nav,
-    footer {
-        margin: 0 auto;
-    } */
-
-    /* header {
-        grid-template-columns: 24px auto;
-    } */
-
     .hamburguer {
         display: none;
     }
@@ -30,12 +19,31 @@
     .about-me-with-photo {
         display: flex;
         flex-direction: row;
-        align-items: baseline;
+        align-items: stretch;
+        gap: 40px;
     }
 
-        picture img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
+    .about-me,
+    .student {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
     }
+
+    .student picture,
+    .student img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        margin: 10px auto;
+        display: block;
+    }
+
+    .wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 5px;
+    }
+}

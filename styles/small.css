@@ -18,7 +18,7 @@
 header {
     display: grid;
     grid-template-columns: 40px auto 38px;
-    padding: 5px;
+    padding: 0;
     align-items: center;
     column-gap: 8px;
 }
@@ -27,7 +27,8 @@ header img {
     display: block;
     width: 100%;
     height: auto;
-    padding: 5px;
+    padding: 0;
+    margin: 5px auto;
 }
 
 /*--------------- HAMBURGUER --------------------- */
@@ -86,8 +87,8 @@ header img {
 }
 
 h1 {
-    margin-left: 5px;
-    padding: 5px;
+    margin: 5px;
+    padding: 5px 0;
 }
 
 /* ------------- MAIN -------------------- */
@@ -101,31 +102,35 @@ h2 {
 
 /* ------------- About Me Section -------------------- */
 
-.about-me {
-    padding: 5px;
-    margin: 5px;
+.about-me,
+.student {
+    background-color: var(--accent2-color);
 }
 
 .about-me p {
-    background-color: var(--accent3-color);
-    padding: 5px 5px 40px;
+    padding: 10px 5px 40px 10px;
 }
 
 /* ------------- Student photo Section -------------------- */
 
-.student {
-    padding: 5px;
+.student img {
+    padding: 0;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    display: block;
+    background-color: var(--accent2-color);
 }
 
-.student img {
-    padding: 20px 60px 20px 60px;
-    height: auto;
-    width: 100%;
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5px;
 }
 
 /* ------------- Web Certificate Courses Section -------------------- */
 
-.web-certificate {
+/* .web-certificate {
     padding: 5px;
 }
 
@@ -159,7 +164,7 @@ h2 {
 #course-num {
     flex-direction: column;
     list-style-type: none;
-}
+} */
 
 /* ------------- FOOTER  -------------------- */
 
