@@ -78,23 +78,51 @@ const courses = [
     }
 ]
 
-if (document.getElementById("certificate")) {
-    createCourseCard(courses, "certificate");
-}
+const allBtn = document.getElementById("all-btn");
+const wddBtn = document.getElementById("wdd-btn");
+const cseBtn = document.getElementById("cse-btn");
+const certificateSection = document.getElementById("certificate");
 
-function createCourseCard(coursesArray, containerId) {
-    const coursesCardsContainer = document.getElementById(containerId);
+const courseCardsContainer = document.createElement("div");
+courseCardsContainer.id = "course-cards-container";
+certificateSection.appendChild(courseCardsContainer);
 
-    coursesCardsContainer.innerHTML = "";
+displayCourses(courses);
 
-    coursesArray.forEach(course => {
-        const table = document.createElement("table");
+allBtn.addEventListener("click", () => displayCourses(courses));
+wddBtn.addEventListener("click", () => {
+    const filtered = courses.filter(course => course.subject === "WDD");
+    displayCourses(filtered);
+});
+cseBtn.addEventListener("click", () => {
+    const filtered = courses.filter(course => course.subject === "CSE");
+    displayCourses(filtered);
+});
 
-        table.innerHTML = `
-            <tr><th class="titleCourse" colspan="3">${course.typeCourseName}</th></tr>
-            <tr><td class="course-code"></td><td>${course.subject}</td></tr>
-        `;
+function displayCourses(courseList) {
+    courseCardsContainer.innerHTML = "";
 
-        coursesCardsContainerCardsContainer.appendChild(figure);
+    let totalCredits = courseList.reduce((sum, course) => sum + course.credits, 0);
+
+    courseList.forEach(course => {
+        const card = document.createElement("div");
+        card.classList.add("course-card");
+        card.classList.add(course.completed ? "completed" : "incomplete");
+
+        card.innerHTML = `
+      <h3>${course.subject} ${course.number} - ${course.title}</h3>
+      <p><strong>Certificate:</strong> ${course.certificate}</p>
+      <p><strong>Credits:</strong> ${course.credits}</p>
+      <p>${course.description}</p>
+      <p><strong>Technologies:</strong> ${course.technology.join(", ")}</p>
+      <p><strong>Status:</strong> ${course.completed ? "✓ Completed" : "✕ Not Completed"}</p>
+    `;
+
+        courseCardsContainer.appendChild(card);
     });
+
+    const creditsDisplay = document.createElement("p");
+    creditsDisplay.classList.add("credits-total");
+    creditsDisplay.innerText = `Total Credits: ${totalCredits}`;
+    courseCardsContainer.appendChild(creditsDisplay);
 }

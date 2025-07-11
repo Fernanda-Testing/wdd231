@@ -13,6 +13,12 @@
     box-sizing: border-box;
 }
 
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5px;
+}
+
 /*--------------- HEADER --------------------- */
 
 header {
@@ -31,7 +37,7 @@ header img {
     margin: 5px auto;
 }
 
-/*--------------- HAMBURGUER --------------------- */
+/*--------------- Hamburguer --------------------- */
 
 .hamburguer {
     background: none;
@@ -86,12 +92,12 @@ header img {
     background-color: var(--accent1-color);
 }
 
+/* ------------- MAIN -------------------- */
+
 h1 {
     margin: 5px;
     padding: 5px 0;
 }
-
-/* ------------- MAIN -------------------- */
 
 h2 {
     text-align: center;
@@ -123,49 +129,46 @@ h2 {
     background-color: var(--accent2-color);
 }
 
-.wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 5px;
-}
-
 /* ------------- Web Certificate Courses Section -------------------- */
 
-/* .web-certificate {
+.course-btn {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border-radius: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
     padding: 5px;
+    margin-top: 10px;
 }
 
-.web-certificate p {
-    text-align: center;
+.course-card {
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 1rem 0;
+    background-color: var(--accent2-color);
 }
 
-.courses {
-    display: flex;
-    gap: 5px;
-    padding: 5px;
-    justify-content: space-around;
+#course-cards-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 1rem; }
+
+.course-card.completed {
+    border-left: 8px solid green;
+    background-color: var(--accent1-color)
 }
 
-.courses li {
-    border: solid 1px var(--primary-color);
-    background-color: var(--accent1-color);
-    padding: 5px;
-    text-align: center;
+.course-card.incomplete {
+    border-left: 8px solid crimson;
+    background-color: #fff0f0;
 }
 
-#course-general {
-    list-style-type: none;
+.credits-total {
+    grid-column: span 2;
     font-weight: bold;
-}
-
-#course-general li {
-    border-radius: 8px;
-}
-
-#course-num {
-    flex-direction: column;
-    list-style-type: none;
-} */
+    text-align: right; }
 
 /* ------------- FOOTER  -------------------- */
 
