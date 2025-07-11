@@ -116,8 +116,9 @@ h2 {
 .student img {
     padding: 0;
     width: 100%;
+    height: auto;
     max-width: 300px;
-    margin: 0 auto;
+    margin: 10px auto;
     display: block;
     background-color: var(--accent2-color);
 }
