@@ -88,8 +88,9 @@ header img {
     color: var(--primary-color);
 }
 
-.navigation li.current {
+.current {
     background-color: var(--accent1-color);
+    color: var(--primary-color);
 }
 
 /* ------------- MAIN -------------------- */
@@ -153,22 +154,24 @@ h2 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
-    margin-top: 1rem; }
+    margin-top: 1rem;
+}
 
 .course-card.completed {
-    border-left: 8px solid green;
+    border-left: 8px solid var(--primary-color);
     background-color: var(--accent1-color)
 }
 
 .course-card.incomplete {
-    border-left: 8px solid crimson;
+    border-left: 8px solid brown;
     background-color: #fff0f0;
 }
 
 .credits-total {
     grid-column: span 2;
     font-weight: bold;
-    text-align: right; }
+    text-align: right;
+}
 
 /* ------------- FOOTER  -------------------- */
 
