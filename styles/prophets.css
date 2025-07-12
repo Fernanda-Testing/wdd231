@@ -1,0 +1,52 @@
+:root {
+    --primary-color: #180F00;
+    --secondary-color: #A47031;
+    --accent1-color: #F7E9B6;
+}
+
+* {
+    font-family: "Raleway", sans-serif;
+}
+
+body{
+    color: var(--primary-color);
+}
+
+
+h1,
+h2 {
+    font-family: "Lobster Two", sans-serif;
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    background-color: var(--accent1-color);
+    padding: 1rem;
+    box-shadow: 0 0 15px black;
+}
+
+.prophet-card {
+    text-align: center;
+    background-color: var(--secondary-color);
+    border: 1px solid var(--primary-color);
+    padding: 1rem;
+}
+
+img {
+    box-shadow: 0 0 15px black;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-flow: column;
+    padding: 1rem;
+    background-color: var(--accent1-color);
+    margin-top: 20px;
+    box-shadow: 0 0 15px black;
+}
