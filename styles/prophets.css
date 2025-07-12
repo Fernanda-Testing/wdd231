@@ -12,6 +12,10 @@ body{
     color: var(--primary-color);
 }
 
+p{
+        font-weight: 600;
+        line-height: .5rem;
+}
 
 h1,
 h2 {
