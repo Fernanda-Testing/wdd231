@@ -1,0 +1,62 @@
+{
+    "companies": [
+        [
+            {
+                "name": "Delicias del Sur",
+                "address": "Av. Rivera 2345, Montevideo, Uruguay",
+                "phoneNumber": "+598 99 123 456",
+                "webSiteUrl": "https://www.deliciasdelsur.uy",
+                "image": "images/deliciasdelsur.jpg",
+                "membershiplevel": 2
+            },
+            {
+                "name": "TechNova Solutions",
+                "address": "Calle Ejido 1450, Montevideo, Uruguay",
+                "phoneNumber": "+598 92 888 888",
+                "webSiteUrl": "https://www.technova.com.uy",
+                "image": "images/technova.jpg",
+                "membershiplevel": 3
+            },
+            {
+                "name": "Estudio Contable Ferraz",
+                "address": "Juan Paullier 1185, Montevideo, Uruguay",
+                "phoneNumber": "+598 93 456 789",
+                "webSiteUrl": "https://www.ferrazestudio.uy",
+                "image": "images/ferraro.jpg",
+                "membershiplevel": 1
+            },
+            {
+                "name": "EcoTienda Naturales",
+                "address": "Av. Brasil 1980, Montevideo, Uruguay",
+                "phoneNumber": "+598 91 111 222",
+                "webSiteUrl": "https://www.ecotiendanaturales.uy",
+                "image": "images/ecotienda.jpg",
+                "membershiplevel": 2
+            },
+            {
+                "name": "Arquitectura Urbana",
+                "address": "Soriano 1023, Montevideo, Uruguay",
+                "phoneNumber": "+598 95 987 654",
+                "webSiteUrl": "https://www.arqurbana.uy",
+                "image": "images/arquitecturaurbana.jpg",
+                "membershiplevel": 3
+            },
+            {
+                "name": "Panadería La Miga",
+                "address": "Luis Alberto de Herrera 3050, Montevideo, Uruguay",
+                "phoneNumber": "+598 94 321 000",
+                "webSiteUrl": "https://www.lamiga.uy",
+                "image": "images/lamiga.jpg",
+                "membershiplevel": 1
+            },
+            {
+                "name": "Vía Verde Logística",
+                "address": "Camino Carrasco 5120, Montevideo, Uruguay",
+                "phoneNumber": "+598 98 765 432",
+                "webSiteUrl": "https://www.viaverde.uy",
+                "image": "images/viaverde.jpg",
+                "membershiplevel": 2
+            }
+        ]
+    ]
+}

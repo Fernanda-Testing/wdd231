@@ -1,0 +1,41 @@
+@media only screen and (min-width: 900px) {
+
+    #menu {
+        display: none;
+    }
+
+    header {
+        display: flex;
+        flex-direction: row;
+        padding: 8px 24px;
+        align-items: center;
+    }
+    
+    .pages {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 32px;
+        list-style: none;
+        padding: 0 24px;
+        margin: 0;
+    }
+
+    .pages li {
+        list-style: none;
+    }
+
+    nav {
+        flex: 1;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 8px 24px;
+    }
+
+}

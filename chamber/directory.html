@@ -6,22 +6,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:description"
         content="Directory page of our M-Montevidean Chamber of Commerce provides a list of local business and other organizations that belong to the chamber of commerce.">
-    <meta property="og:image" content="https://fernanda-testing.github.io/wdd231/chamber/images/main-directory-image.webp">
+    <meta property="og:image"
+        content="https://fernanda-testing.github.io/wdd231/chamber/images/main-directory-image.webp">
     <meta property="og:title" content="WDD231 | Directory | M-Montevidean Chamber of Commerce">
     <meta property="og:url" content="https://fernanda-testing.github.io/wdd231/chamber/directory.html">
     <title>WDD231 | Directory | M-Montevidean Chamber of Commerce</title>
     <link rel="stylesheet" href="styles/chamber.css">
+    <link rel="stylesheet" href="styles/chamber-larger.css">
     <meta name="author" content="Fernanda Souza">
     <meta name="description"
         content="Directory page of our M-Montevidean Chamber of Commerce provides a list of local business and other organizations that belong to the chamber of commerce.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Noto+Sans&display=swap"
+        rel="stylesheet">
     <script src="scripts/chamber.js" defer></script>
     <link rel="icon" href="favicon.ico">
 </head>
 
 <body>
+
+    <header>
+        <div id="titleAndLogo">
+            <img src="images/chamber-logo.svg" alt="M-Montevidean Chamber Logo" class="logo">
+            <h1>M-Montevidean Chamber of Commerce</h1>
+        </div>
+
+        <button type="button" id="menu" aria-label="Toggle navigation menu"></button>
+
+        <nav>
+            <ul class="pages">
+                <li><a href="https://fernanda-testing.github.io/wdd231/chamber/index.html">Home</a></li>
+                <li><a href="https://fernanda-testing.github.io/wdd231/chamber/directory.html"
+                        class="active">Directory</a>
+                </li>
+                <li><a href="https://fernanda-testing.github.io/wdd231/chamber/join.html">Join</a></li>
+                <li><a href="https://fernanda-testing.github.io/wdd231/chamber/discover.html">Discover</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!-- <main>
+        <div id="cards" class="grid"></div>
+    </main> -->
+
+    <footer>
+
+        <div id="footer-part-one">
+            <p id="name-page">M-Montevidean Chamber of Commerce</p>
+            <p>18 de Julio 2000, Montevideo</p>
+            <P>info@mmontevidean.org</P>
+            <p>+598 91 752 147</p>
+        </div>
+
+        <div class="social-pages">
+            <a href="https://linkedin.com/in/fernanda-souza-f" target="_blank"><img src="images/linkedin.svg"
+                    alt="Linkedin" width="48" height="48"></a>
+            <a href="https://github.com/fernanda-testing" target="_blank"><img src="images/github.svg" alt="Github"
+                    width="48" height="48"></a>
+            <a href="https://instagram.com/fernanda_souza_f" target="_blank"><img src="images/instagram.svg"
+                    alt="Instagram" width="48" height="48"></a>
+        </div>
+
+        <div id="footer-part-two">
+            <p>WDD231 Class Project</p>
+            <p>Fernanda Souza</p>
+            <p>&copy;<span id="currentyear"></span> M-Montevidean Chamber of Commerce</p>
+            <p id="lastModified"></p>
+        </div>
+
+    </footer>
 
 </body>
 

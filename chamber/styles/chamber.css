@@ -1,0 +1,162 @@
+:root {
+    --primary-color: #050b2e;
+    --secondary-color: #5870f9;
+    --background-color: #eceaea;
+    --text-color: #242323;
+}
+
+* {
+    font-family: "Noto Sans", sans-serif;
+    color: var(--text-color);
+    box-sizing: border-box;
+}
+
+/***********HEADER***********/
+
+h1 {
+    font-family: "Julius Sans One", sans-serif;
+    text-align: left;
+    padding: 8px;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    background-color: var(--background-color);
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    display: block;
+    padding: 8px;
+}
+
+#titleAndLogo {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+}
+
+/***********HAMBURGUER MENU AND PAGES***********/
+
+#menu {
+    background: none;
+    border: none;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: absolute;
+    top: 1rem;
+    right: .1rem;
+}
+
+#menu::before {
+    content: "\2630";
+}
+
+#menu.open::before {
+    content: "\00D7";
+}
+
+.pages {
+    display: none;
+}
+
+.open a {
+    display: block;
+    text-align: center;
+}
+
+.pages.open {
+    display: flex;
+    flex-direction: column;
+}
+
+.pages ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+li {
+    list-style: none;
+}
+
+.pages a:link,
+.pages a:visited {
+    display: block;
+    padding: 8px;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.pages a:hover {
+    border: 2px solid var(--primary-color);
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.pages a.active {
+    color: var(--primary-color);
+    font-weight: bold;
+    border-bottom: solid 1px;
+}
+
+/***********CARDS***********/
+
+/* .grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    background-color: var(--secondary-color);
+    padding: 1rem;
+    box-shadow: 0 0 15px black;
+} */
+
+
+/***********FOOTER***********/
+
+.social-pages {
+    display: flex;
+    justify-content: center;
+    column-gap: 8px;
+    margin: 15px;
+}
+
+.social-pages a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+}
+
+.social-pages img {
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+}
+
+.social-pages a:hover {
+    border: 2px solid var(--primary-color);
+    padding: 2.5px;
+    border-radius: 5px;
+}
+
+#name-page {
+    font-weight: bold;
+}
+
+footer {
+    background-color: var(--background-color);
+    padding: 1rem 5px;
+    text-align: left;
+    line-height: 3px;
+}
