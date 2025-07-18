@@ -1,12 +1,11 @@
 {
     "companies": [
-        [
             {
                 "name": "Delicias del Sur",
                 "address": "Av. Rivera 2345, Montevideo, Uruguay",
                 "phoneNumber": "+598 99 123 456",
                 "webSiteUrl": "https://www.deliciasdelsur.uy",
-                "image": "images/deliciasdelsur.jpg",
+                "image": "images/deliciasdelsur.webp",
                 "membershiplevel": 2
             },
             {
@@ -14,7 +13,7 @@
                 "address": "Calle Ejido 1450, Montevideo, Uruguay",
                 "phoneNumber": "+598 92 888 888",
                 "webSiteUrl": "https://www.technova.com.uy",
-                "image": "images/technova.jpg",
+                "image": "images/technova.webp",
                 "membershiplevel": 3
             },
             {
@@ -22,7 +21,7 @@
                 "address": "Juan Paullier 1185, Montevideo, Uruguay",
                 "phoneNumber": "+598 93 456 789",
                 "webSiteUrl": "https://www.ferrazestudio.uy",
-                "image": "images/ferraro.jpg",
+                "image": "images/ferraz.webp",
                 "membershiplevel": 1
             },
             {
@@ -30,7 +29,7 @@
                 "address": "Av. Brasil 1980, Montevideo, Uruguay",
                 "phoneNumber": "+598 91 111 222",
                 "webSiteUrl": "https://www.ecotiendanaturales.uy",
-                "image": "images/ecotienda.jpg",
+                "image": "images/ecotienda.webp",
                 "membershiplevel": 2
             },
             {
@@ -38,7 +37,7 @@
                 "address": "Soriano 1023, Montevideo, Uruguay",
                 "phoneNumber": "+598 95 987 654",
                 "webSiteUrl": "https://www.arqurbana.uy",
-                "image": "images/arquitecturaurbana.jpg",
+                "image": "images/arquitectura-urbana.webp",
                 "membershiplevel": 3
             },
             {
@@ -46,7 +45,7 @@
                 "address": "Luis Alberto de Herrera 3050, Montevideo, Uruguay",
                 "phoneNumber": "+598 94 321 000",
                 "webSiteUrl": "https://www.lamiga.uy",
-                "image": "images/lamiga.jpg",
+                "image": "images/lamiga.webp",
                 "membershiplevel": 1
             },
             {
@@ -54,9 +53,8 @@
                 "address": "Camino Carrasco 5120, Montevideo, Uruguay",
                 "phoneNumber": "+598 98 765 432",
                 "webSiteUrl": "https://www.viaverde.uy",
-                "image": "images/viaverde.jpg",
+                "image": "images/viaverde.webp",
                 "membershiplevel": 2
             }
-        ]
     ]
 }

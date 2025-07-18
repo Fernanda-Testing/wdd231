@@ -16,57 +16,107 @@ hamButton.addEventListener('click', () => {
 });
 
 
+const gridbutton = document.querySelector("#grid");
+const listbutton = document.querySelector("#list");
+const display = document.querySelector("article");
+
+
+gridbutton.addEventListener("click", () => {
+    display.classList.add("grid");
+    display.classList.remove("list");
+});
+
+listbutton.addEventListener("click", showList); 
+
+function showList() {
+    display.classList.add("list");
+    display.classList.remove("grid");
+}
 
 /* Grid for companies information */
 
-// const src = "data/members.json";
-// const cards = document.querySelector('#cards');
+const src = "data/members.json";
+const cards = document.querySelector('#cards');
+let companiesGlobal = []; // Guardamos la data globalmente
 
-// const getCompaniesData = async () => {
-//     try {
-//         const response = await fetch(src); // Wait for the fetch to complete
-//         const data = await response.json(); // Wait for the response to be converted to JSON
-//         // Output the fetched data
-//         displayCompanies(data.companies);
-//     } catch (error) {
-//         console.error("Error fetching data:", error); // Handle any errors
-//     }
-// };
+const getCompaniesData = async () => {
+    try {
+        const response = await fetch(src);
+        const data = await response.json();
+        companiesGlobal = data.companies;
 
-// getCompanieData(src);
+        displayCompaniesByGrid(companiesGlobal); // Vista inicial
+    } catch (error) {
+        console.error("Error fetching data:", error);
+    }
+};
 
-// const displayCompanies = (company) => {
-//     companies.forEach((company) => {
-//         let card = document.createElement("section");
-//         card.classList.add("companie-card");
+getCompaniesData();
 
-//         let name = document.createElement("h2");
+const displayCompaniesByGrid = (companiesArray) => {
+    cards.innerHTML = ""; // Limpiamos
+    cards.classList.add("grid");
+    cards.classList.remove("list");
 
-//         let address = document.createElement("p");
-//         let phoneNumber = document.createElement("p");
+    companiesArray.forEach((company) => {
+        const card = document.createElement("section");
+        card.classList.add("companie-card");
 
-//         let photo = document.createElement("img");
+        const photo = document.createElement("img");
+        photo.setAttribute("src", company.image);
+        photo.setAttribute("alt", `About ${company.name}`);
+        photo.setAttribute("loading", "lazy");
+        photo.setAttribute("width", "150");
+        photo.setAttribute("height", "150");
 
+        const address = document.createElement("p");
+        address.textContent = company.address;
 
-//         name.textContent = `${company.name}`;
+        const phoneNumber = document.createElement("p");
+        phoneNumber.textContent = company.phoneNumber;
 
-//         address.textContent = `Address: ${company.address}`;
-//         phoneNumber.textContent = `Phone number: ${company.phoneNumber}`;
+        const webUrl = document.createElement("a");
+        webUrl.textContent = company.webSiteUrl;
+        webUrl.href = company.webSiteUrl;
+        webUrl.target = "_blank";
 
-//         photo.setAttribute("src", company.imageurl); //rever
-//         photo.setAttribute("alt", `Photo of ${company.name}`);
-//         photo.setAttribute("loading", "lazy");
-//         photo.setAttribute("width", "150");
-//         photo.setAttribute("height", "150");
+        card.appendChild(photo);
+        card.appendChild(address);
+        card.appendChild(phoneNumber);
+        card.appendChild(webUrl);
 
-//         // Append the section(card) with the created elements
+        cards.appendChild(card);
+    });
+};
 
-//         card.appendChild(name);
-//         card.appendChild(address);
-//         card.appendChild(phoneNumber);
-//         card.appendChild(photo);
+const displayCompaniesByList = (companiesArray) => {
+    cards.innerHTML = ""; // Limpiamos
+    cards.classList.remove("grid");
+    cards.classList.add("list");
 
-//         cards.appendChild(card);
+    const table = document.createElement("table");
 
-//     });
-// }
+    const tbody = document.createElement("tbody");
+
+    companiesArray.forEach((company) => {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+            <td>${company.name}</td>
+            <td>${company.address}</td>
+            <td>${company.phoneNumber}</td>
+            <td><a href="${company.webSiteUrl}" target="_blank">${company.webSiteUrl}</a></td>`;
+        tbody.appendChild(row);
+    });
+
+    table.appendChild(tbody);
+    cards.appendChild(table);
+};
+
+// Eventos para alternar vistas
+gridbutton.addEventListener("click", () => {
+    displayCompaniesByGrid(companiesGlobal);
+});
+
+listbutton.addEventListener("click", () => {
+    displayCompaniesByList(companiesGlobal);
+});
