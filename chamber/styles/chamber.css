@@ -13,10 +13,11 @@
 
 /***********HEADER***********/
 
-h1 {
+h2{
     font-family: "Julius Sans One", sans-serif;
     text-align: left;
     padding: 8px;
+    word-break: break-word;
 }
 
 header {
@@ -24,6 +25,7 @@ header {
     width: 100%;
     flex-direction: column;
     background-color: var(--background-color);
+    position: relative;
 }
 
 .logo {
@@ -39,6 +41,7 @@ header {
     flex-direction: row;
     width: 100%;
     align-items: center;
+    padding-right: 3.5rem;
 }
 
 /***********HAMBURGUER MENU AND PAGES***********/
