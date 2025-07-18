@@ -52,7 +52,7 @@ header {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     position: absolute;
     top: 1rem;
-    right: .1rem;
+    right: .5rem;
 }
 
 #menu::before {
