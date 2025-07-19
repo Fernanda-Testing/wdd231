@@ -116,8 +116,14 @@ function setActiveButton(activeBtn) {
 }
 
 window.addEventListener("resize", () => {
+
     if (window.innerWidth < 900 && display.classList.contains("list")) {
         displayCompaniesByGrid(companiesGlobal);
         setActiveButton(gridbutton);
+    }
+
+    if (window.innerWidth >= 900) {
+        pages.classList.remove("open");
+        hamButton.classList.remove("open");
     }
 });
