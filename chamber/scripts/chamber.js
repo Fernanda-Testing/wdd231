@@ -16,7 +16,7 @@ hamButton.addEventListener('click', () => {
 
 const gridbutton = document.querySelector("#grid");
 const listbutton = document.querySelector("#list");
-const display = document.querySelector("article");
+const display = document.querySelector("div");
 
 gridbutton.addEventListener("click", () => {
     displayCompaniesByGrid(companiesGlobal);
