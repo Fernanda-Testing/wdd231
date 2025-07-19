@@ -37,7 +37,7 @@ function showList() {
 
 const src = "data/members.json";
 const cards = document.querySelector('#cards');
-let companiesGlobal = []; // Guardamos la data globalmente
+let companiesGlobal = []; 
 
 const getCompaniesData = async () => {
     try {
@@ -45,7 +45,7 @@ const getCompaniesData = async () => {
         const data = await response.json();
         companiesGlobal = data.companies;
 
-        displayCompaniesByGrid(companiesGlobal); // Vista inicial
+        displayCompaniesByGrid(companiesGlobal); 
     } catch (error) {
         console.error("Error fetching data:", error);
     }
@@ -54,7 +54,7 @@ const getCompaniesData = async () => {
 getCompaniesData();
 
 const displayCompaniesByGrid = (companiesArray) => {
-    cards.innerHTML = ""; // Limpiamos
+    cards.innerHTML = ""; 
     cards.classList.add("grid");
     cards.classList.remove("list");
 
@@ -90,7 +90,7 @@ const displayCompaniesByGrid = (companiesArray) => {
 };
 
 const displayCompaniesByList = (companiesArray) => {
-    cards.innerHTML = ""; // Limpiamos
+    cards.innerHTML = ""; 
     cards.classList.remove("grid");
     cards.classList.add("list");
 
@@ -112,7 +112,6 @@ const displayCompaniesByList = (companiesArray) => {
     cards.appendChild(table);
 };
 
-// Eventos para alternar vistas
 gridbutton.addEventListener("click", () => {
     displayCompaniesByGrid(companiesGlobal);
 });
