@@ -104,12 +104,20 @@ li {
     padding: 8px;
     border-radius: 5px;
     cursor: pointer;
+    
 }
 
 .pages a.active {
     color: var(--primary-color);
     font-weight: bold;
     border-bottom: solid 1px;
+}
+
+/***********h1 & OPTIONS BUTTONS***********/
+
+h1{
+    padding: 1rem .5rem;
+    margin-bottom: 0px;
 }
 
 .view-options {
@@ -143,6 +151,7 @@ li {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1rem;
+    padding: 1rem;
 }
 
 .companie-card {
@@ -162,9 +171,12 @@ li {
 }
 
 .list td {
-    border: 1px solid var(--text-color);
-    padding: 0.5rem;
+    padding: 8px 24px;
     text-align: left;
+}
+
+#companyname{
+    font-weight: bold;
 }
 
 tr:nth-child(odd) {
@@ -206,8 +218,8 @@ tr:nth-child(odd) {
 
 footer {
     background-color: var(--background-color);
-    padding: 1rem 5px;
+    padding: 1rem;
     text-align: left;
     line-height: 6px;
-    margin-top: 8px;
+    margin-top: 2rem;
 }

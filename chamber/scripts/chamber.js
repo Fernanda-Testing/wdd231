@@ -101,7 +101,7 @@ const displayCompaniesByList = (companiesArray) => {
     companiesArray.forEach((company) => {
         const row = document.createElement("tr");
         row.innerHTML = `
-            <td>${company.name}</td>
+            <td id="companyname">${company.name}</td>
             <td>${company.address}</td>
             <td>${company.phoneNumber}</td>
             <td><a href="${company.webSiteUrl}" target="_blank">${company.webSiteUrl}</a></td>`;
