@@ -7,7 +7,6 @@ const pages = document.querySelector('.pages');
 const today = new Date();
 
 currentYear.innerHTML = `<span class="highlight">${today.getFullYear()}</span>`;
-
 lastModified.innerHTML = `<span class="highlight">Last Modification: ${document.lastModified}</span>`;
 
 hamButton.addEventListener('click', () => {
@@ -15,29 +14,27 @@ hamButton.addEventListener('click', () => {
     hamButton.classList.toggle('open');
 });
 
-
 const gridbutton = document.querySelector("#grid");
 const listbutton = document.querySelector("#list");
 const display = document.querySelector("article");
 
-
 gridbutton.addEventListener("click", () => {
-    display.classList.add("grid");
-    display.classList.remove("list");
+    displayCompaniesByGrid(companiesGlobal);
+    setActiveButton(gridbutton);
 });
 
-listbutton.addEventListener("click", showList); 
-
-function showList() {
-    display.classList.add("list");
-    display.classList.remove("grid");
-}
+listbutton.addEventListener("click", () => {
+    if (window.innerWidth >= 900) {
+        displayCompaniesByList(companiesGlobal);
+        setActiveButton(listbutton);
+    }
+});
 
 /* Grid for companies information */
 
 const src = "data/members.json";
 const cards = document.querySelector('#cards');
-let companiesGlobal = []; 
+let companiesGlobal = [];
 
 const getCompaniesData = async () => {
     try {
@@ -45,7 +42,8 @@ const getCompaniesData = async () => {
         const data = await response.json();
         companiesGlobal = data.companies;
 
-        displayCompaniesByGrid(companiesGlobal); 
+        displayCompaniesByGrid(companiesGlobal);
+        setActiveButton(gridbutton);
     } catch (error) {
         console.error("Error fetching data:", error);
     }
@@ -54,7 +52,7 @@ const getCompaniesData = async () => {
 getCompaniesData();
 
 const displayCompaniesByGrid = (companiesArray) => {
-    cards.innerHTML = ""; 
+    cards.innerHTML = "";
     cards.classList.add("grid");
     cards.classList.remove("list");
 
@@ -90,12 +88,11 @@ const displayCompaniesByGrid = (companiesArray) => {
 };
 
 const displayCompaniesByList = (companiesArray) => {
-    cards.innerHTML = ""; 
+    cards.innerHTML = "";
     cards.classList.remove("grid");
     cards.classList.add("list");
 
     const table = document.createElement("table");
-
     const tbody = document.createElement("tbody");
 
     companiesArray.forEach((company) => {
@@ -112,10 +109,15 @@ const displayCompaniesByList = (companiesArray) => {
     cards.appendChild(table);
 };
 
-gridbutton.addEventListener("click", () => {
-    displayCompaniesByGrid(companiesGlobal);
-});
+function setActiveButton(activeBtn) {
+    gridbutton.classList.remove("active");
+    listbutton.classList.remove("active");
+    activeBtn.classList.add("active");
+}
 
-listbutton.addEventListener("click", () => {
-    displayCompaniesByList(companiesGlobal);
+window.addEventListener("resize", () => {
+    if (window.innerWidth < 900 && display.classList.contains("list")) {
+        displayCompaniesByGrid(companiesGlobal);
+        setActiveButton(gridbutton);
+    }
 });

@@ -12,7 +12,7 @@
     }
 
     h1,
-    .grid{
+    .grid {
         padding: 8px 24px;
     }
 
@@ -33,6 +33,10 @@
 
     nav {
         flex: 1;
+    }
+
+    #list {
+        display: inline-block;
     }
 
     footer {
