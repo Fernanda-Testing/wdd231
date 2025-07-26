@@ -1,0 +1,22 @@
+main{
+    text-align: center;
+    border: 1px solid gray;
+    background-color: skyblue;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+figcaption{
+    text-transform: capitalize;
+}
+
+#current-temp{
+    font-weight: bold;
+}
+
+h1,
+main,
+footer{
+    text-align: center;
+    padding: 10px;
+}
