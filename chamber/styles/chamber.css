@@ -104,7 +104,7 @@ li {
     padding: 8px;
     border-radius: 5px;
     cursor: pointer;
-    
+
 }
 
 .pages a.active {
@@ -119,7 +119,7 @@ li {
     display: none;
 }
 
-h1{
+h1 {
     padding: 1rem .5rem;
     margin-bottom: 0px;
 }
@@ -185,7 +185,7 @@ h1{
     text-align: left;
 }
 
-#companyname{
+#companyname {
     font-weight: bold;
 }
 
@@ -193,8 +193,50 @@ tr:nth-child(odd) {
     background-color: var(--background-color);
 }
 
-/***********FOOTER***********/
+/***********Home Page***********/
 
+.hero {
+    position: relative;
+    width: 100%;
+}
+
+picture img {
+    width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: 0 0 20px black;
+}
+
+.join-btn {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 12px 48px;
+    background-color: #ff5722;
+    color: var(--background-color);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 0 20px black;
+}
+
+.join-btn:hover {
+    border: 2px solid var(--primary-color);
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 20px black;
+}
+
+li{
+text-transform: capitalize;
+}
+
+/***********FOOTER***********/
 .social-pages {
     display: flex;
     justify-content: center;

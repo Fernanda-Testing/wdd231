@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:description"
+        content="Home page of our M-Montevidean Chamber of Commerce provides current information about the chamber, near events, ways to join us, and information about the weather in Montevideo.">
+    <meta property="og:image"
+        content="https://fernanda-testing.github.io/wdd231/chamber/images/main-directory-image.webp">
+    <meta property="og:title" content="WDD231 | Directory | M-Montevidean Chamber of Commerce">
+    <meta property="og:url" content="https://fernanda-testing.github.io/wdd231/chamber/directory.html">
+    <title>WDD231 | Home | M-Montevidean Chamber of Commerce</title>
+    <link rel="stylesheet" href="styles/chamber.css">
+    <link rel="stylesheet" href="styles/chamber-larger.css">
+    <meta name="author" content="Fernanda Souza">
+    <meta name="description"
+        content="Home page of our M-Montevidean Chamber of Commerce provides current information about the chamber, near events, ways to join us, and information about the weather in Montevideo.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Noto+Sans&display=swap"
+        rel="stylesheet">
+    <script type="module" src="scripts/chamber.mjs"></script>
+    <script type="module" src="scripts/temperature.mjs"></script>
+    <link rel="icon" href="favicon.ico">
+</head>
+
+<body>
+
+    <header>
+        <div id="titleAndLogo">
+            <a href="https://fernanda-testing.github.io/wdd231/chamber/index.html">
+                <img src="images/chamber-logo.svg" alt="M-Montevidean Chamber Logo" class="logo">
+            </a>
+            <h2>M-Montevidean Chamber of Commerce</h2>
+        </div>
+
+        <button type="button" id="menu" aria-label="Toggle navigation menu"></button>
+
+        <nav>
+            <ul class="pages">
+                <li><a href="https://fernanda-testing.github.io/wdd231/chamber/index.html" class="active">Home</a></li>
+                <li><a href="https://fernanda-testing.github.io/wdd231/chamber/directory.html">Directory</a>
+                </li>
+                <li><a href="https://fernanda-testing.github.io/wdd231/chamber/join.html">Join</a></li>
+                <li><a href="https://fernanda-testing.github.io/wdd231/chamber/discover.html">Discover</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+        <div class="hero">
+            <picture>
+                <source srcset="images/community-work.webp" media="(min-width: 768px)">
+                <img src="images/montevideo-city.webp" alt="Montevideo city" width="1000" height="1500">
+            </picture>
+            <a href="https://fernanda-testing.github.io/wdd231/chamber/join.html">
+                <button class="join-btn">Join us</button>
+            </a>
+        </div>
+        <h1>Home</h1>
+        <section>
+            <h2>Events</h2>
+        </section>
+        <section>
+            <h2>Current Weather</h2>
+            <span id="current-temp"></span>
+            <img id="weather-icon" src="" alt="">
+            <ul>
+                <li id="desc"></li>
+                <li id="high"></li>
+                <li id="low"></li>
+                <li id="humidity"></li>
+                <li id="sunrise"></li>
+                <li id="sunset"></li>
+            </ul>
+        </section>
+        <section>
+            <h2>Weather Forecast</h2>
+            <ul>
+                <li id="today"></li>
+                <li id="tomorrow"></li>
+                <li id="after-tomorrow"></li>
+            </ul>
+        </section>
+        <section>Spotlights</section>
+    </main>
+
+    <footer>
+
+        <div id="footer-part-one">
+            <p id="name-page">M-Montevidean Chamber of Commerce</p>
+            <p>18 de Julio 2000, Montevideo</p>
+            <p>info@mmontevidean.org</p>
+            <p>+598 91 752 147</p>
+        </div>
+
+        <div class="social-pages">
+            <a href="https://linkedin.com/in/fernanda-souza-f" target="_blank"><img src="images/linkedin.svg"
+                    alt="Linkedin" width="48" height="48"></a>
+            <a href="https://github.com/fernanda-testing" target="_blank"><img src="images/github.svg" alt="Github"
+                    width="48" height="48"></a>
+            <a href="https://instagram.com/fernanda_souza_f" target="_blank"><img src="images/instagram.svg"
+                    alt="Instagram" width="48" height="48"></a>
+        </div>
+
+        <div id="footer-part-two">
+            <p>WDD231 Class Project</p>
+            <p>Fernanda Souza</p>
+            <p>&copy;<span id="currentyear"></span> M-Montevidean Chamber of Commerce</p>
+            <p id="lastModified"></p>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

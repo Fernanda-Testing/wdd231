@@ -39,6 +39,16 @@
         display: inline-block;
     }
 
+    .join-btn {
+        position: absolute;
+        bottom: 80px;
+        right: 80px;
+        left: auto;
+        top: auto;
+        transform: none;
+        padding: 12px 54px;
+    }
+
     footer {
         display: flex;
         flex-direction: row;
