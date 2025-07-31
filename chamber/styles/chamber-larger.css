@@ -49,6 +49,38 @@
         padding: 12px 54px;
     }
 
+    .block-sections {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: space-between;
+        align-items: stretch;;
+    }
+
+    .block-sections section {
+        flex: 1 1 30%;
+        min-width: 250px;
+    }
+
+    .event-gallery {
+        display: flex;
+        justify-content: space-between;
+        gap: 0.5rem;
+        margin-top: 1rem;
+    }
+
+    .event-gallery figure {
+        flex: 1;
+        margin: 0;
+        text-align: center;
+    }
+
+    .event-gallery img {
+        width: 100%;
+        height: auto;
+        border-radius: 6px;
+    }
+
     footer {
         display: flex;
         flex-direction: row;

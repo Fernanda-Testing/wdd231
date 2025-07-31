@@ -7,6 +7,9 @@ const weatherLow = document.querySelector('#low');
 const weatherHumidity = document.querySelector('#humidity');
 const weatherSunrise = document.querySelector('#sunrise');
 const weatherSunset = document.querySelector('#sunset');
+const forecastToday = document.querySelector('#today');
+const forecastTomorrow = document.querySelector('#tomorrow');
+const forecastAfterTomorrow = document.querySelector('#after-tomorrow');
 
 //Required variables for the url
 const myKey = '7220dbb9a474f5b3c4bef9c288f01112';
@@ -15,6 +18,7 @@ const myLong = -56.19;
 
 //Construct a full path using template literals
 const url = `//api.openweathermap.org/data/2.5/weather?lat=${myLat}&lon=${myLong}&appid=${myKey}&units=metric`;
+const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${myLat}&lon=${myLong}&appid=${myKey}&units=metric`;
 
 //try to grab the current weather data
 const apiFetch = async () => {
@@ -32,11 +36,23 @@ const apiFetch = async () => {
     }
 };
 
+//try to grab the forecast weather data
+const getForecast = async () => {
+    try {
+        const response = await fetch(forecastUrl);
+        if (!response.ok) throw Error(await response.text());
+        const data = await response.json();
+        displayForecast(data);
+    } catch (error) {
+        console.log(error);
+    }
+};
+
 //Display the json data unto my web page
 function displayResults(data) {
 
     const iconsrc = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
-    weatherIcon.setAttribute('SRC', iconsrc);
+    weatherIcon.setAttribute('src', iconsrc);
     weatherIcon.setAttribute('alt', data.weather[0].description);
 
     currentTemperature.innerHTML = `${data.main.temp}&deg;C`;
@@ -55,5 +71,64 @@ function displayResults(data) {
     weatherSunset.innerHTML = `Sunset: ${sunsetTime}`;
 }
 
+function displayForecast(data) {
+    const forecastMap = {
+        today: [],
+        tomorrow: [],
+        afterTomorrow: []
+    };
+
+    const today = new Date();
+    const day1 = today.toDateString();
+
+    const tomorrow = new Date(today);
+    tomorrow.setDate(today.getDate() + 1);
+    const day2 = tomorrow.toDateString();
+
+    const afterTomorrow = new Date(today);
+    afterTomorrow.setDate(today.getDate() + 2);
+    const day3 = afterTomorrow.toDateString();
+
+    data.list.forEach(item => {
+        const date = new Date(item.dt * 1000);
+        const itemDay = date.toDateString();
+
+        if (itemDay === day1) {
+            forecastMap.today.push(item);
+        } else if (itemDay === day2) {
+            forecastMap.tomorrow.push(item);
+        } else if (itemDay === day3) {
+            forecastMap.afterTomorrow.push(item);
+        }
+    });
+
+    const getMiddayForecast = (dayArray) => {
+        return dayArray.find(item => item.dt_txt.includes("12:00:00")) || dayArray[Math.floor(dayArray.length / 2)];
+    };
+
+    const setForecast = (element, data) => {
+        const date = new Date(data.dt * 1000);
+        const dayName = date.toLocaleDateString('es-UY', { weekday: 'long' });
+        const iconUrl = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
+        const temp = Math.round(data.main.temp);
+        const desc = data.weather[0].description;
+
+        element.innerHTML = `
+            <strong>${dayName}</strong><br>
+            <img src="${iconUrl}" alt="${desc}"><br>
+            ${desc}<br>
+            ${temp}&deg;C
+        `;
+    };
+
+    setForecast(forecastToday, getMiddayForecast(forecastMap.today));
+    setForecast(forecastTomorrow, getMiddayForecast(forecastMap.tomorrow));
+    setForecast(forecastAfterTomorrow, getMiddayForecast(forecastMap.afterTomorrow));
+}
+
+
+
 //Start the process
 apiFetch();
+
+getForecast();
