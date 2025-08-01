@@ -114,7 +114,7 @@ function displayForecast(data) {
         const desc = data.weather[0].description;
 
         element.innerHTML = `
-            <strong>${dayName}</strong><br>
+            <strong>${dayName}:</strong><br>
             <img src="${iconUrl}" alt="${desc}"><br>
             ${desc}<br>
             ${temp}&deg;C
@@ -125,8 +125,6 @@ function displayForecast(data) {
     setForecast(forecastTomorrow, getMiddayForecast(forecastMap.tomorrow));
     setForecast(forecastAfterTomorrow, getMiddayForecast(forecastMap.afterTomorrow));
 }
-
-
 
 //Start the process
 apiFetch();

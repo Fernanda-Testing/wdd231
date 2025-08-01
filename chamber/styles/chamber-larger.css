@@ -51,10 +51,8 @@
 
     .block-sections {
         display: flex;
-        flex-wrap: wrap;
         gap: 1rem;
-        justify-content: space-between;
-        align-items: stretch;;
+        align-items: stretch;
     }
 
     .block-sections section {
@@ -66,7 +64,6 @@
         display: flex;
         justify-content: space-between;
         gap: 0.5rem;
-        margin-top: 1rem;
     }
 
     .event-gallery figure {

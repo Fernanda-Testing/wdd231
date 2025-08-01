@@ -122,6 +122,7 @@ li {
 h1 {
     padding: 1rem .5rem;
     margin-bottom: 0px;
+    margin-left: 1rem;
 }
 
 .view-options {
@@ -155,7 +156,7 @@ h1 {
     border-radius: 5px;
 }
 
-/***********CARDS***********/
+/***********CARDS Directory Page***********/
 
 .grid {
     display: grid;
@@ -243,12 +244,9 @@ h3 {
 }
 
 .album-events {
-    background-color: var(--background-color);
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    background-color: var(--accent1-color);
-    padding: 1rem;
 }
 
 .album-events img {
@@ -258,12 +256,7 @@ h3 {
     box-shadow: 0 0 20px black;
 }
 
-.album-events h4 {
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
-}
-
-figcaption{
+figcaption {
     text-align: center;
 }
 
