@@ -127,3 +127,54 @@ window.addEventListener("resize", () => {
         hamButton.classList.remove("open");
     }
 });
+
+function getRandomCompanies(companiesArray, count) {
+    const shuffled = [...companiesArray].sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, count);
+}
+
+function displaySpotlights(companiesArray) {
+    const spotlightsContainer = document.querySelector("#spotlights");
+    spotlightsContainer.innerHTML = "";
+
+    const selectedCompanies = getRandomCompanies(companiesArray, 3);
+
+    selectedCompanies.forEach(company => {
+        const spotlightCard = document.createElement("section");
+        spotlightCard.classList.add("companie-card", "spotlight");
+
+        const img = document.createElement("img");
+        img.src = company.image;
+        img.alt = `Logo of ${company.name}`;
+        img.width = 100;
+        img.height = 100;
+        img.loading = "lazy";
+
+        const info = document.createElement("div");
+        info.innerHTML = `
+            <h4>${company.name}</h4>
+            <p>${company.address}</p>
+            <p>${company.phoneNumber}</p>
+            <a href="${company.webSiteUrl}" target="_blank">${company.webSiteUrl}</a>
+        `;
+
+        spotlightCard.appendChild(img);
+        spotlightCard.appendChild(info);
+
+        spotlightsContainer.appendChild(spotlightCard);
+    });
+}
+
+getCompaniesData = async () => {
+    try {
+        const response = await fetch(src);
+        const data = await response.json();
+        companiesGlobal = data.companies;
+
+        displayCompaniesByGrid(companiesGlobal);
+        displaySpotlights(companiesGlobal); 
+        setActiveButton(gridbutton);
+    } catch (error) {
+        console.error("Error fetching data:", error);
+    }
+};

@@ -55,7 +55,7 @@ function displayResults(data) {
     weatherIcon.setAttribute('src', iconsrc);
     weatherIcon.setAttribute('alt', data.weather[0].description);
 
-    currentTemperature.innerHTML = `${data.main.temp}&deg;C`;
+    currentTemperature.innerHTML = `<strong>${data.main.temp}&deg;C<strong>`;
     weatherDesc.innerHTML = `${data.weather[0].description}`;
     weatherHigh.innerHTML = `High: ${data.main.temp_max}&deg;C`;
     weatherLow.innerHTML = `Low: ${data.main.temp_min}&deg;C`;
@@ -114,11 +114,17 @@ function displayForecast(data) {
         const desc = data.weather[0].description;
 
         element.innerHTML = `
-            <strong>${dayName}:</strong><br>
-            <img src="${iconUrl}" alt="${desc}"><br>
-            ${desc}<br>
-            ${temp}&deg;C
-        `;
+        <div class="forecast-card">
+            <div class="forecast-left">
+                <strong>${dayName}</strong>
+                <img src="${iconUrl}" alt="${desc}">
+            </div>
+            <div class="forecast-right">
+                <p>${desc}</p>
+                <p>${temp}&deg;C</p>
+            </div>
+        </div>
+    `;
     };
 
     setForecast(forecastToday, getMiddayForecast(forecastMap.today));

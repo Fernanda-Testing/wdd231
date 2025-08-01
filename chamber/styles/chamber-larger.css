@@ -56,7 +56,6 @@
     }
 
     .block-sections section {
-        flex: 1 1 30%;
         min-width: 250px;
     }
 
