@@ -11,6 +11,14 @@
         align-items: center;
     }
 
+    #titleAndLogo {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        align-items: center;
+        padding-right: 3.5rem;
+    }
+
     h2,
     .grid {
         padding: 8px 16px;
@@ -47,6 +55,7 @@
         top: auto;
         transform: none;
         padding: 12px 54px;
+        font-size: 1.2rem;
     }
 
     .block-sections,

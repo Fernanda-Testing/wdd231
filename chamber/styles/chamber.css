@@ -17,7 +17,7 @@ h1 {
     font-family: "Julius Sans One", sans-serif;
     text-align: left;
     padding: 8px;
-    word-break: break-word;
+        overflow-wrap: break-word;
 }
 
 header {
@@ -37,8 +37,8 @@ header {
 }
 
 #titleAndLogo {
-    display: flex;
-    flex-direction: row;
+    /* display: flex;
+    flex-direction: row; */
     width: 100%;
     align-items: center;
     padding-right: 3.5rem;
@@ -173,7 +173,7 @@ h2 {
     box-shadow: 0 0 8px black;
     border-radius: 5px;
     word-wrap: break-word;
-    overflow-wrap: break-word;
+    overflow-wrap: anywhere;
 }
 
 .list table {
@@ -220,7 +220,6 @@ picture img {
     color: #ffff;
     border: none;
     border-radius: 5px;
-    font-size: 1.2rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
     box-shadow: 0 0 20px black;
@@ -345,6 +344,7 @@ figcaption {
 
 .spotlight-container div {
     text-align: left;
+    line-height: 1.2rem;
 }
 
 .spotlight-container h4 {
@@ -388,6 +388,6 @@ footer {
     background-color: var(--background-color);
     padding: 1rem;
     text-align: left;
-    line-height: 6px;
+    line-height: 1rem;
     margin-top: 2rem;
 }
