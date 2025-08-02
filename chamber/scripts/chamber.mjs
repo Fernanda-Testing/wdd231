@@ -9,26 +9,30 @@ const today = new Date();
 currentYear.innerHTML = `<span class="highlight">${today.getFullYear()}</span>`;
 lastModified.innerHTML = `<span class="highlight">Last Modification: ${document.lastModified}</span>`;
 
-hamButton.addEventListener('click', () => {
-    pages.classList.toggle('open');
-    hamButton.classList.toggle('open');
-});
+if (hamButton && pages) {
+    hamButton.addEventListener('click', () => {
+        pages.classList.toggle('open');
+        hamButton.classList.toggle('open');
+    });
+}
 
 const gridbutton = document.querySelector("#grid");
 const listbutton = document.querySelector("#list");
 const display = document.querySelector("#cards");
 
-gridbutton.addEventListener("click", () => {
-    displayCompaniesByGrid(companiesGlobal);
-    setActiveButton(gridbutton);
-});
+if (gridbutton && listbutton && display) {
+    gridbutton.addEventListener("click", () => {
+        displayCompaniesByGrid(companiesGlobal);
+        setActiveButton(gridbutton);
+    });
 
-listbutton.addEventListener("click", () => {
-    if (window.innerWidth >= 900) {
-        displayCompaniesByList(companiesGlobal);
-        setActiveButton(listbutton);
-    }
-});
+    listbutton.addEventListener("click", () => {
+        if (window.innerWidth >= 900) {
+            displayCompaniesByList(companiesGlobal);
+            setActiveButton(listbutton);
+        }
+    });
+}
 
 /* Grid for companies information */
 
@@ -144,7 +148,11 @@ function displaySpotlights(companiesArray) {
     const spotlightsContainer = document.querySelector("#spotlights");
     spotlightsContainer.innerHTML = "";
 
-    const selectedCompanies = getRandomCompanies(companiesArray, 3);
+    const filteredCompanies = companiesArray.filter(company =>
+        company.membershiplevel === 2 || company.membershiplevel === 3
+    );
+
+    const selectedCompanies = getRandomCompanies(filteredCompanies, 3);
 
     selectedCompanies.forEach(company => {
         const spotlightCard = document.createElement("section");
@@ -167,7 +175,6 @@ function displaySpotlights(companiesArray) {
 
         spotlightCard.appendChild(img);
         spotlightCard.appendChild(info);
-
         spotlightsContainer.appendChild(spotlightCard);
     });
 }

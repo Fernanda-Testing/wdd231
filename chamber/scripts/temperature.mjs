@@ -103,12 +103,16 @@ function displayForecast(data) {
     });
 
     const getMiddayForecast = (dayArray) => {
+        if (!dayArray || dayArray.length === 0) return null;
         return dayArray.find(item => item.dt_txt.includes("12:00:00")) || dayArray[Math.floor(dayArray.length / 2)];
     };
 
-    const setForecast = (element, data) => {
-        const date = new Date(data.dt * 1000);
-        const dayName = date.toLocaleDateString('es-UY', { weekday: 'long' });
+    const setForecast = (element, data, label) => {
+        if (!data) {
+            element.innerHTML = `<p>No forecast data available for ${label}</p>`;
+            return;
+        }
+
         const iconUrl = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
         const temp = Math.round(data.main.temp);
         const desc = data.weather[0].description;
@@ -116,7 +120,7 @@ function displayForecast(data) {
         element.innerHTML = `
         <div class="forecast-card">
             <div class="forecast-left">
-                <strong>${dayName}</strong>
+                <strong>${label}</strong>
                 <img src="${iconUrl}" alt="${desc}">
             </div>
             <div class="forecast-right">
@@ -127,9 +131,31 @@ function displayForecast(data) {
     `;
     };
 
-    setForecast(forecastToday, getMiddayForecast(forecastMap.today));
-    setForecast(forecastTomorrow, getMiddayForecast(forecastMap.tomorrow));
-    setForecast(forecastAfterTomorrow, getMiddayForecast(forecastMap.afterTomorrow));
+    const todayForecast = getMiddayForecast(forecastMap.today);
+    if (todayForecast) {
+        setForecast(forecastToday, todayForecast, "Today");
+    } else {
+
+        const iconUrl = weatherIcon.getAttribute('src');
+        const desc = weatherDesc.textContent;
+        const temp = parseInt(currentTemperature.textContent) || "N/A";
+
+        forecastToday.innerHTML = `
+        <div class="forecast-card">
+            <div class="forecast-left">
+                <strong>Today (Current)</strong>
+                <img src="${iconUrl}" alt="${desc}">
+            </div>
+            <div class="forecast-right">
+                <p>${desc}</p>
+                <p>${temp}&deg;C</p>
+            </div>
+        </div>
+        `;
+    }
+
+    setForecast(forecastTomorrow, getMiddayForecast(forecastMap.tomorrow), "Tomorrow");
+    setForecast(forecastAfterTomorrow, getMiddayForecast(forecastMap.afterTomorrow), "After Tomorrow");
 }
 
 //Start the process
