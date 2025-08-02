@@ -334,6 +334,18 @@ figcaption {
     flex-grow: 1;
 }
 
+ .spotlight-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+ }
+
+ .spotlight-container div{
+    margin-bottom: 2rem;
+    text-align: left;
+ }
+
 /***********FOOTER***********/
 .social-pages {
     display: flex;

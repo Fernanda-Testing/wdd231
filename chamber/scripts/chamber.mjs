@@ -170,6 +170,7 @@ function displaySpotlights(companiesArray) {
             <h4>${company.name}</h4>
             <p>${company.address}</p>
             <p>${company.phoneNumber}</p>
+            <p>Membership Level: ${getMembershipLevelText(company.membershiplevel)}</p>
             <a href="${company.webSiteUrl}" target="_blank">${company.webSiteUrl}</a>
         `;
 
@@ -177,4 +178,13 @@ function displaySpotlights(companiesArray) {
         spotlightCard.appendChild(info);
         spotlightsContainer.appendChild(spotlightCard);
     });
+}
+
+function getMembershipLevelText(level) {
+    switch (level) {
+        case 1: return "Bronze";
+        case 2: return "Silver";
+        case 3: return "Gold";
+        default: return "Standard";
+    }
 }

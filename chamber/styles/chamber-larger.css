@@ -49,10 +49,15 @@
         padding: 12px 54px;
     }
 
-    .block-sections {
+    .block-sections,
+    .spotlight-container {
         display: flex;
         gap: 1rem;
         align-items: stretch;
+    }
+
+    .spotlight-container {
+        flex-direction: row;
     }
 
     .block-sections section {
