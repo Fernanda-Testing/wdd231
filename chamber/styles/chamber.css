@@ -120,9 +120,8 @@ li {
 }
 
 h1 {
-    padding: 1rem .5rem;
     margin-bottom: 0px;
-    margin-left: 1rem;
+    margin-left: 0;
 }
 
 .view-options {
@@ -206,9 +205,11 @@ picture img {
     height: auto;
     display: block;
     box-shadow: 0 0 20px black;
+    margin-top: 2rem;
 }
 
 .join-btn {
+    display: inline-block;
     position: absolute;
     top: 80%;
     left: 50%;
@@ -222,6 +223,7 @@ picture img {
     cursor: pointer;
     transition: background-color 0.3s ease;
     box-shadow: 0 0 20px black;
+    text-decoration: none;
 }
 
 .join-btn:hover {
