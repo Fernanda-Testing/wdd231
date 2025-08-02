@@ -37,8 +37,6 @@ header {
 }
 
 #titleAndLogo {
-    /* display: flex;
-    flex-direction: row; */
     width: 100%;
     align-items: center;
     padding-right: 3.5rem;

@@ -127,13 +127,12 @@ function setActiveButton(activeBtn) {
 }
 
 window.addEventListener("resize", () => {
-
-    if (window.innerWidth < 900 && display.classList.contains("list")) {
+    if (display && display.classList.contains("list") && window.innerWidth < 900) {
         displayCompaniesByGrid(companiesGlobal);
         setActiveButton(gridbutton);
     }
 
-    if (window.innerWidth >= 900) {
+    if (pages && hamButton && window.innerWidth >= 900) {
         pages.classList.remove("open");
         hamButton.classList.remove("open");
     }
