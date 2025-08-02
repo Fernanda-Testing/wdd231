@@ -42,8 +42,15 @@ const getCompaniesData = async () => {
         const data = await response.json();
         companiesGlobal = data.companies;
 
-        displayCompaniesByGrid(companiesGlobal);
-        setActiveButton(gridbutton);
+        if (document.querySelector("#cards")) {
+            displayCompaniesByGrid(companiesGlobal);
+            setActiveButton(gridbutton);
+        }
+
+        if (document.querySelector("#spotlights")) {
+            displaySpotlights(companiesGlobal);
+        }
+
     } catch (error) {
         console.error("Error fetching data:", error);
     }
@@ -164,17 +171,3 @@ function displaySpotlights(companiesArray) {
         spotlightsContainer.appendChild(spotlightCard);
     });
 }
-
-getCompaniesData = async () => {
-    try {
-        const response = await fetch(src);
-        const data = await response.json();
-        companiesGlobal = data.companies;
-
-        displayCompaniesByGrid(companiesGlobal);
-        displaySpotlights(companiesGlobal); 
-        setActiveButton(gridbutton);
-    } catch (error) {
-        console.error("Error fetching data:", error);
-    }
-};
