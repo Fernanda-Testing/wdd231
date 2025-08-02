@@ -168,10 +168,10 @@ function displaySpotlights(companiesArray) {
         const info = document.createElement("div");
         info.innerHTML = `
             <h4>${company.name}</h4>
-            <p>${company.address}</p>
-            <p>${company.phoneNumber}</p>
-            <p>Membership Level: ${getMembershipLevelText(company.membershiplevel)}</p>
-            <a href="${company.webSiteUrl}" target="_blank">${company.webSiteUrl}</a>
+            <p><strong>Address:</strong> ${company.address}</p>
+            <p><strong>Phone Number:</strong> ${company.phoneNumber}</p>
+            <p><strong>Membership Level:</strong> ${getMembershipLevelText(company.membershiplevel)}</p>
+            <p><strong>WebSite URL: </strong><a href="${company.webSiteUrl}" target="_blank">${company.webSiteUrl}</a></p>
         `;
 
         spotlightCard.appendChild(img);
