@@ -81,7 +81,20 @@ const courses = [
 const allBtn = document.getElementById("all-btn");
 const wddBtn = document.getElementById("wdd-btn");
 const cseBtn = document.getElementById("cse-btn");
+
 const certificateSection = document.getElementById("certificate");
+
+const buttonCourses = document.querySelector("#buttonsCourses");
+
+const courseDetails = document.querySelector("#course-details");
+const titleBox = document.querySelector("#course-details h2");
+const closeButton = document.querySelector("#course-details button");
+
+const courseName = document.querySelector("#course-details h3");
+const courseCredits = document.querySelector("#credits");
+const courseCertificate = document.querySelector("#course-certificate");
+const courseInfo = document.querySelector("#detail");
+const courseTechnology = document.querySelector("#technology");
 
 const courseCardsContainer = document.createElement("div");
 courseCardsContainer.id = "course-cards-container";
@@ -105,24 +118,39 @@ function displayCourses(courseList) {
     let totalCredits = courseList.reduce((sum, course) => sum + course.credits, 0);
 
     courseList.forEach(course => {
-        const card = document.createElement("div");
-        card.classList.add("course-card");
-        card.classList.add(course.completed ? "completed" : "incomplete");
+        const btn = document.createElement("button");
+        btn.classList.add("course-btn");
+        btn.classList.add(course.completed ? "completed" : "incomplete");
 
-        card.innerHTML = `
-      <h3>${course.subject} ${course.number} - ${course.title}</h3>
-      <p><strong>Certificate:</strong> ${course.certificate}</p>
-      <p><strong>Credits:</strong> ${course.credits}</p>
-      <p>${course.description}</p>
-      <p><strong>Technologies:</strong> ${course.technology.join(", ")}</p>
-      <p><strong>Status:</strong> ${course.completed ? "✓ Completed" : "✕ Not Completed"}</p>
-    `;
+        btn.innerHTML = `${course.subject} ${course.number}`;
 
-        courseCardsContainer.appendChild(card);
+        courseCardsContainer.appendChild(btn);
+        courseCardsContainer.addEventListener('click', () => {
+            displayCourseDetails(course);
+        });
     });
 
     const creditsDisplay = document.createElement("p");
     creditsDisplay.classList.add("credits-total");
     creditsDisplay.innerText = `Total Credits: ${totalCredits}`;
     courseCardsContainer.appendChild(creditsDisplay);
+}
+
+function displayCourseDetails(course) {
+    courseDetails.innerHTML = `
+        <button id="closeModal">❌</button>
+        <h2>${course.subject} ${course.number}</h2>
+        <h3>${course.title}</h3>
+        <p>${course.credits} credits</p>
+        <p><strong>Certificate</strong>: ${course.certificate}</p>
+        <p>${course.description}</p>
+        <p><strong>Technology</strong>: ${course.technology.join(', ')}</p>
+    `;
+
+    courseDetails.showModal();
+
+    const closeModal = document.getElementById("closeModal");
+    closeModal.addEventListener("click", () => {
+        courseDetails.close();
+    });
 }
