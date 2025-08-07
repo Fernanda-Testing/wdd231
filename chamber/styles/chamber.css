@@ -399,8 +399,9 @@ form {
         cursor: pointer;
         transition: background-color 0.3s ease;
         box-shadow: 0 0 20px black;
-        margin: 2rem 0;
+        margin: 1rem 0;
         appearance: none;
+        width: 280px;
     }
 
     input[type=submit]:hover {
@@ -419,6 +420,7 @@ form {
         overflow-x: hidden;
         resize: vertical;
         word-wrap: break-word;
+        margin-top: .5rem;
     }
 }
 
