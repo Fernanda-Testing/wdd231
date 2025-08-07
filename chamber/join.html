@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:description" content="">
+    <meta property="og:image"
+        content="https://fernanda-testing.github.io/wdd231/chamber/images/main-directory-image.webp">
+    <meta property="og:title" content="WDD231 | Join | M-Montevidean Chamber of Commerce">
+    <meta property="og:url" content="https://fernanda-testing.github.io/wdd231/chamber/join.html">
+    <title>WDD231 | Join | M-Montevidean Chamber of Commerce</title>
+    <link rel="stylesheet" href="styles/chamber.css">
+    <link rel="stylesheet" href="styles/chamber-larger.css">
+    <meta name="author" content="Fernanda Souza">
+    <meta name="description" content="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Noto+Sans&display=swap"
+        rel="stylesheet">
+    <script type="module" src="scripts/chamber.mjs"></script>
+    <script type="module" src="scripts/thankyou.mjs"></script>
+    <link rel="icon" href="favicon.ico">
+</head>
+
+<body>
+
+    <header>
+        <div id="titleAndLogo">
+            <a href="https://fernanda-testing.github.io/wdd231/chamber/index.html">
+                <img src="images/chamber-logo.svg" alt="M-Montevidean Chamber Logo" class="logo">
+            </a>
+            <h2>M-Montevidean Chamber of Commerce</h2>
+        </div>
+
+        <button type="button" id="menu" aria-label="Toggle navigation menu"></button>
+
+        <nav>
+            <ul class="pages">
+                <li><a href="https://fernanda-testing.github.io/wdd231/chamber/index.html">Home</a></li>
+                <li><a href="https://fernanda-testing.github.io/wdd231/chamber/directory.html">Directory</a>
+                </li>
+                <li><a href="https://fernanda-testing.github.io/wdd231/chamber/join.html" class="active">Join</a></li>
+                <li><a href="https://fernanda-testing.github.io/wdd231/chamber/discover.html">Discover</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <h1>Join</h1>
+
+        <form method="GET" action="thanks.html" class="designOne">
+            <h3>Membership Application Form</h3>
+            <label>First Name <input type="text" name="first" required autocomplete="given-name"
+                    title="Your First Name"></label>
+            <label>Last Name <input type="text" name="last" required autocomplete="family-name"
+                    title="Your Last Name"></label>
+            <label>Organizational Title <input type="text" name="organizational-title" required
+                    autocomplete="organization-title" pattern="^[A-Za-z\s-]{7,}$"
+                    title="Your Organizational Title. Only letters, spaces, and hyphens are allowed, with a minimum of 7 characters."></label>
+            <label>Email Address<input type="email" name="email" required placeholder="mfsouza2503@gmail.com"
+                    title="Your Email Address" autocomplete="email"></label>
+            <label>Mobile Phone Number <input type="tel" name="phone" autocomplete="tel"
+                    title="A Phone Number with dashes" placeholder="091-752-147"></label>
+            <label>Business Organization's Name <input type="text" name="buisiness-organization-name" required
+                    autocomplete="organization" title="Your Business Organization Name"></label>
+
+            <label>Membership Level</label>
+            <label><input type="radio" name="membership-level" value="NP-membership" checked> NP Membership</label>
+            <label><input type="radio" name="membership-level" value="Bronze"> Bronze Membership</label>
+            <label><input type="radio" name="membership-level" value="Silver"> Silver Membership</label>
+            <label><input type="radio" name="membership-level" value="Gold"> Gold Membership</label>
+
+            <label for="business-desc">Business/Organization's Description <br>
+                <textarea id="business-desc" name="business-desc" rows="4" cols="50"
+                    title="Your Business/Organization's Description"></textarea></label>
+            <input type="hidden" id="formTimestamp" name="formTimestamp">
+            <input type="submit" value="Apply to Join">
+        </form>
+
+        <div id="showHere">
+            <h3>Membership Levels</h3>
+        </div>
+
+        <dialog id="mydialog">
+            <div>
+                <h2>Sample Title</h2>
+                <button>X</button>
+            </div>
+            <p></p>
+        </dialog>
+
+    </main>
+
+    <footer>
+
+        <div id="footer-part-one">
+            <p id="name-page">M-Montevidean Chamber of Commerce</p>
+            <p>18 de Julio 2000, Montevideo</p>
+            <p>info@mmontevidean.org</p>
+            <p>+598 91 752 147</p>
+        </div>
+
+        <div class="social-pages">
+            <a href="https://linkedin.com/in/fernanda-souza-f" target="_blank"><img src="images/linkedin.svg"
+                    alt="Linkedin" width="48" height="48"></a>
+            <a href="https://github.com/fernanda-testing" target="_blank"><img src="images/github.svg" alt="Github"
+                    width="48" height="48"></a>
+            <a href="https://instagram.com/fernanda_souza_f" target="_blank"><img src="images/instagram.svg"
+                    alt="Instagram" width="48" height="48"></a>
+        </div>
+
+        <div id="footer-part-two">
+            <p>WDD231 Class Project</p>
+            <p>Fernanda Souza</p>
+            <p>&copy;<span id="currentyear"></span> M-Montevidean Chamber of Commerce</p>
+            <p id="lastModified"></p>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
