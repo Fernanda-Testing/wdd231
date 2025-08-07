@@ -350,6 +350,10 @@ figcaption {
 
 /*********Join page*********/
 
+.main-content{
+    align-items: stretch;
+}
+
 form {
     margin: 1rem 2%;
 
@@ -420,7 +424,6 @@ form {
         overflow-x: hidden;
         resize: vertical;
         word-wrap: break-word;
-        margin-top: .5rem;
     }
 
     #business-desc{

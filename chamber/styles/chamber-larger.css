@@ -91,6 +91,12 @@
         border-radius: 6px;
     }
 
+    .main-content {
+        display: flex;
+        gap: 1rem;
+        align-items: baseline;
+    }
+
     footer {
         display: flex;
         flex-direction: row;
