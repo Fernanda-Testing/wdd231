@@ -422,6 +422,10 @@ form {
         word-wrap: break-word;
         margin-top: .5rem;
     }
+
+    #business-desc{
+        margin: 1rem 0 0;
+    }
 }
 
 /* #results {
