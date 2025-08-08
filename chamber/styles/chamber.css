@@ -155,14 +155,16 @@ h1 {
 
 /***********CARDS Directory Page***********/
 
-.grid {
+.grid,
+#membership-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1rem;
     padding: 1rem;
 }
 
-.companie-card {
+.companie-card,
+.membership-card {
     border: 1px solid var(--background-color);
     padding: 1rem;
     background-color: white;
@@ -350,8 +352,9 @@ figcaption {
 
 /*********Join page*********/
 
-.main-content{
+.main-content {
     align-items: stretch;
+    justify-content: space-evenly;
 }
 
 form {
@@ -402,7 +405,7 @@ form {
         border-radius: 5px;
         cursor: pointer;
         transition: background-color 0.3s ease;
-        box-shadow: 0 0 20px black;
+        box-shadow: 0 0 10px black;
         margin: 1rem 0;
         appearance: none;
         width: 280px;
@@ -426,9 +429,52 @@ form {
         word-wrap: break-word;
     }
 
-    #business-desc{
+    #business-desc {
         margin: 1rem 0 0;
     }
+}
+
+.membership-card h2 {
+    text-align: center;
+}
+
+.membership-card button {
+    padding: 12px 48px;
+    background-color: #4122dd;
+    color: #ffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 0 10px black;
+    margin: 1rem 0;
+    appearance: none;
+    width: 180px;
+}
+
+.membership-card button:hover {
+    border: 2px solid var(--primary-color);
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 10px black;
+}
+
+#dialogBox {
+    border: none;
+    border-radius: 8px;
+    padding: 1rem;
+    max-width: 100%;
+}
+
+#dialogBox h2 {
+    text-align: center;
+    border-bottom: 1px solid;
+}
+
+::backdrop {
+    background-color: rgba(0, 0, 0, 0.603);
 }
 
 /* #results {
