@@ -55,13 +55,13 @@ function openModal(membership) {
     dialogList.innerHTML = ""; 
 
     const description = document.createElement("li");
-    description.textContent = membership.description;
+    description.innerHTML = `<strong>Description</strong>: ${membership.description}`;
 
     const cost = document.createElement("li");
-    cost.textContent = `Cost: $${membership.cost} USD/month`;
+    cost.innerHTML = `<strong>Cost:</strong> $${membership.cost} USD/month`;
 
     const benefit = document.createElement("li");
-    benefit.textContent = `Benefits: ${membership.benefit}`;
+    benefit.innerHTML = `<strong>Benefits:</strong> ${membership.benefit}`;
 
     dialogList.appendChild(description);
     dialogList.appendChild(cost);

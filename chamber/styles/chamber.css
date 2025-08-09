@@ -234,7 +234,7 @@ picture img {
     box-shadow: 0 0 20px black;
 }
 
-li {
+.block-sections li {
     text-transform: capitalize;
 }
 
@@ -465,10 +465,34 @@ form {
     border: none;
     border-radius: 8px;
     padding: 1rem;
-    max-width: 100%;
+    width: fit-content;
+    overflow-wrap: anywhere;
 }
 
-#dialogBox h2 {
+#dialogBox li{
+    margin-top: 1rem;
+}
+
+#title-and-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#title-and-btn button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+#title-and-btn button:hover {
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+}
+
+#title-and-btn h2 {
+    flex: 1;
     text-align: center;
     border-bottom: 1px solid;
 }
