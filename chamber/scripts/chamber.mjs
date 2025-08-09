@@ -187,5 +187,3 @@ function getMembershipLevelText(level) {
         default: return "Standard";
     }
 }
-
-document.getElementById("formTimestamp").value = new Date().toLocaleString();

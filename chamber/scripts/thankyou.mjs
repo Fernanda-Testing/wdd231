@@ -1,20 +1,14 @@
-// const getString = window.location.search;
-// console.log(getString);
+
+document.getElementById("formTimestamp").value = new Date().toLocaleString();
 
 const myInfo = new URLSearchParams(window.location.search);
-console.log(myInfo);
-
-// console.log(myInfo.get('first'));
-// console.log(myInfo.get('last'));
-// console.log(myInfo.get('ordinance'));
-// console.log(myInfo.get('date'));
-// console.log(myInfo.get('location'));
-// console.log(myInfo.get('phone'));
-// console.log(myInfo.get('email'));
 
 document.querySelector("#results").innerHTML = `
-<p>Appointment for: ${myInfo.get('first')} ${myInfo.get('last')}</p>
-<p>Proxy ${myInfo.get('ordinance')} on ${myInfo.get('date')} in the ${myInfo.get('location')} Temple</p>
-<p>Your Phone: ${myInfo.get('phone')}</p>
+<h2>Thank you for completing the form!</h2>
+<p>Membership Application of: ${myInfo.get('first')} ${myInfo.get('last')}</p>
+<p>Business Organization's Name: ${myInfo.get('buisiness-organization-name')}</p>
 <p>Your Email: ${myInfo.get('email')}</p>
+<p>Your Phone: ${myInfo.get('phone')}</p>
+<p>Membership Level: ${myInfo.get('membership-level')}</p>
+<p>Current date timestamp: ${myInfo.get('formTimestamp')}</p>
 `
