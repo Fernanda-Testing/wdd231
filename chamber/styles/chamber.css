@@ -434,6 +434,24 @@ form {
     }
 }
 
+.membership-card {
+    transform: scale(0.5);
+    opacity: 0;
+    animation: cardEntrance 0.8s ease-out forwards;
+}
+
+@keyframes cardEntrance {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
 .membership-card h2 {
     text-align: center;
 }
