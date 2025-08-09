@@ -476,7 +476,7 @@ form {
     list-style-position: inside;
 }
 
-#dialogBox li{
+#dialogBox li {
     margin-top: 1rem;
     padding-left: 0;
 }
@@ -511,12 +511,13 @@ form {
     background-color: rgba(0, 0, 0, 0.603);
 }
 
-/* #results {
-        background-color: #F4F1DE;
-        padding: 0 1rem;
-        border: 1px solid #E07A5F;
-        border-radius: 6px;
-    } */
+#results {
+    background-color: var(--background-color);
+    padding: 0 1rem;
+    margin: 1rem 2%;
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+}
 
 /***********FOOTER***********/
 
