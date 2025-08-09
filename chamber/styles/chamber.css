@@ -467,16 +467,25 @@ form {
     padding: 1rem;
     width: fit-content;
     overflow-wrap: anywhere;
+    max-width: 550px;
+}
+
+#dialogBox ul {
+    margin-left: 0;
+    padding-left: 0;
+    list-style-position: inside;
 }
 
 #dialogBox li{
     margin-top: 1rem;
+    padding-left: 0;
 }
 
 #title-and-btn {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0;
 }
 
 #title-and-btn button {
@@ -495,6 +504,7 @@ form {
     flex: 1;
     text-align: center;
     border-bottom: 1px solid;
+    margin: 0;
 }
 
 ::backdrop {
