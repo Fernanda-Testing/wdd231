@@ -461,6 +461,11 @@ form {
     box-shadow: 0 0 10px black;
 }
 
+input[type="submit"]:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 3px;
+}
+
 #dialogBox {
     border: none;
     border-radius: 8px;
