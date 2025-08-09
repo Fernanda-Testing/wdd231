@@ -75,3 +75,10 @@ closeButton.addEventListener("click", () => {
 });
 
 displayCards(memberships);
+
+document.addEventListener("DOMContentLoaded", () => {
+    const tsField = document.getElementById("formTimestamp");
+    if (tsField) {
+        tsField.value = new Date().toLocaleString();
+    }
+});

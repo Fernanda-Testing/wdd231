@@ -1,13 +1,9 @@
-
-document.getElementById("formTimestamp").value = new Date().toLocaleString();
-
 const myInfo = new URLSearchParams(window.location.search);
 
 document.querySelector("#results").innerHTML = `
-<p>Membership Application of: ${myInfo.get('first')} ${myInfo.get('last')}</p>
-<p>Business Organization's Name: ${myInfo.get('buisiness-organization-name')}</p>
-<p>Your Email: ${myInfo.get('email')}</p>
-<p>Your Phone: ${myInfo.get('phone')}</p>
-<p>Membership Level: ${myInfo.get('membership-level')}</p>
-<p>Current date timestamp: ${myInfo.get('formTimestamp')}</p>
+<p><strong>Membership Application of:</strong> ${myInfo.get('first')} ${myInfo.get('last')}</p>
+<p><strong>Business Organization's Name:</strong> ${myInfo.get('business-organization-name')}</p>
+<p><strong>Your Email:</strong> ${myInfo.get('email')}</p>
+<p><strong>Your Phone:</strong> ${myInfo.get('phone')}</p>
+<p><strong>Form completed on:</strong> ${myInfo.get('formTimestamp')}</p>
 `
