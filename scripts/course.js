@@ -124,10 +124,11 @@ function displayCourses(courseList) {
 
         btn.innerHTML = `${course.subject} ${course.number}`;
 
-        courseCardsContainer.appendChild(btn);
-        courseCardsContainer.addEventListener('click', () => {
+        btn.addEventListener('click', () => {
             displayCourseDetails(course);
         });
+
+        courseCardsContainer.appendChild(btn);
     });
 
     const creditsDisplay = document.createElement("p");
@@ -135,6 +136,7 @@ function displayCourses(courseList) {
     creditsDisplay.innerText = `Total Credits: ${totalCredits}`;
     courseCardsContainer.appendChild(creditsDisplay);
 }
+
 
 function displayCourseDetails(course) {
     courseDetails.innerHTML = `
