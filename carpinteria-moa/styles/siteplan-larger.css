@@ -1,0 +1,23 @@
+@media only screen and (min-width: 900px) {
+
+    #wireframes {
+        display: flex;
+        justify-items: center;
+        flex-flow: row;
+        padding: 10px;
+        gap: 20px;
+    }
+
+    .wireframe-item {
+        display: flex;
+        flex-flow: row;
+        gap: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        border-radius: 4px;
+    }
+
+    footer{
+        line-height: 5px;
+    }
+}
