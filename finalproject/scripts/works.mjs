@@ -88,3 +88,48 @@ function displaySpotlights(worksArray) {
     goToAlbumBtn.setAttribute("id", "go-to-album-btn");
     spotlightsContainer.appendChild(goToAlbumBtn);
 }
+
+function filterWorks(worksArray, filterProperty, filterValue, containerId) {
+    const filteredWorks = worksArray.filter(work => {
+        return work[filterProperty] === filterValue;
+    });
+    displayWorks(filteredWorks);
+}
+
+function setActiveFilterLink(clickedId) {
+    const links = document.querySelectorAll(".nav-filters a");
+    links.forEach(link => {
+        if (link.id === clickedId) {
+            link.classList.add("active");
+        } else {
+            link.classList.remove("active");
+        }
+    });
+}
+
+function setupFilter(id, property, value) {
+    const link = document.getElementById(id);
+    if (!link) return;
+
+    link.addEventListener("click", (e) => {
+        e.preventDefault();
+        setActiveFilterLink(id);
+
+        if (document.getElementById("cards")) {
+            if (property === "all") {
+                displayWorks(worksGlobal);
+            } else {
+                filterWorks(worksGlobal, property, value, "cards");
+            }
+        }
+    });
+}
+
+setupFilter("woodworking", "isItWoodWork", true);
+setupFilter("plastering", "isItWoodWork", false);
+setupFilter("small", "sizework", "Small");
+setupFilter("medium", "sizework", "Medium");
+setupFilter("large", "sizework", "Large");
+setupFilter("indoor", "IsItOutdoorFurniture", false);
+setupFilter("outdoor", "IsItOutdoorFurniture", true);
+setupFilter("all-works", "all", null);
