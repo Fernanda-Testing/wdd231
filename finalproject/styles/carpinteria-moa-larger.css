@@ -38,32 +38,28 @@
         flex: 1;
     }
 
-    #list {
-        display: inline-block;
+    .pages a:link,
+    .pages a:visited {
+        border-right: solid 1px;
     }
 
-    .ask-quote-btn {
-        position: absolute;
-        bottom: 80px;
-        right: 80px;
-        left: auto;
-        top: auto;
-        transform: none;
-        padding: 12px 54px;
-        font-size: 1.2rem;
+    .main-content {
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 1.2rem;
     }
 
-    /*     
-            footer {
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: space-between;
-                padding: 8px 24px;
-            } */
+    .hero {
+        padding-left: 1.2rem;
+    }
 
+    .main-content-one {
+        flex-direction: column;
+    }
 
     footer {
+        padding: 8px 24px;
         line-height: 5px;
     }
+
 }
