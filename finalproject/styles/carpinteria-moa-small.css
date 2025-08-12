@@ -152,7 +152,8 @@ picture img {
     margin-top: 2rem;
 }
 
-.ask-quote-btn {
+.ask-quote-btn,
+#go-to-album-btn {
     padding: 12px 36px;
     background-color: var(--typeface-color);
     color: var(--background-color);
@@ -164,7 +165,8 @@ picture img {
     width: fit-content;
 }
 
-.ask-quote-btn:hover {
+.ask-quote-btn:hover,
+#go-to-album-btn:hover {
     background-color: var(--heading-color);
     color: var(--background-color);
     cursor: pointer;
@@ -186,7 +188,8 @@ picture img {
     transition: opacity 1.5s ease, filter 1.5s ease;
 }
 
-.hero-img.loaded {
+.hero-img.loaded,
+.spotlight-container img.loaded {
     opacity: 1;
     filter: brightness(100%);
 }
@@ -222,6 +225,12 @@ section h2 {
 
 section {
     padding: 1.2rem;
+}
+
+.content-sections{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .grid {

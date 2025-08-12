@@ -82,4 +82,9 @@ function displaySpotlights(worksArray) {
         spotlightCard.appendChild(name);
         spotlightsContainer.appendChild(spotlightCard);
     });
+
+    const goToAlbumBtn = document.createElement("button");
+    goToAlbumBtn.textContent = `GO TO ALBUM`;
+    goToAlbumBtn.setAttribute("id", "go-to-album-btn");
+    spotlightsContainer.appendChild(goToAlbumBtn);
 }

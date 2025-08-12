@@ -15,5 +15,5 @@ if (hamButton && pages) {
 }
 
 window.addEventListener("load", () => {
-    document.querySelector(".hero-img").classList.add("loaded");
+    document.querySelector(".hero-img", "spotlight - container img").classList.add("loaded");
 });
