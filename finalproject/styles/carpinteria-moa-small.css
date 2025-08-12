@@ -35,7 +35,10 @@ header h2 {
     height: 80px;
     object-fit: contain;
     display: block;
-    padding: 8px;
+}
+
+.logo:hover {
+    box-shadow: 0 0 20px black;
 }
 
 #titleAndLogo {
@@ -125,6 +128,13 @@ li {
     line-height: 1.2rem;
 }
 
+.main-content-one {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
 .hero {
     position: relative;
     width: 100%;
@@ -139,29 +149,21 @@ picture img {
 }
 
 .ask-quote-btn {
-    display: inline-block;
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     padding: 12px 36px;
     background-color: var(--typeface-color);
     color: var(--background-color);
     border: none;
-    border-radius: 5px;
+    border-radius: 2rem;
     cursor: pointer;
-    transition: background-color 0.3s ease;
     box-shadow: 0 0 20px black;
     text-decoration: none;
+    width: fit-content;
 }
 
 .ask-quote-btn:hover {
-    border: 2px solid var(--primary-color);
-    background-color: var(--background-color);
-    color: var(--primary-color);
-    border-radius: 5px;
+    background-color: var(--heading-color);
+    color: var(--background-color);
     cursor: pointer;
-    box-shadow: 0 0 20px black;
 }
 
 .social-pages a {
@@ -174,9 +176,21 @@ picture img {
     box-shadow: 0 0 20px black;
 }
 
+.hero-img {
+    opacity: 0;
+    filter: brightness(50%);
+    transition: opacity 1.5s ease, filter 1.5s ease;
+}
+
+.hero-img.loaded {
+    opacity: 1;
+    filter: brightness(100%);
+}
+
 footer {
     display: flex;
     text-align: center;
+    font-size: smaller;
     align-items: center;
     justify-content: center;
     flex-flow: column;

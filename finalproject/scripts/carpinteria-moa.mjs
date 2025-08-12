@@ -13,3 +13,7 @@ if (hamButton && pages) {
         hamButton.classList.toggle('open');
     });
 }
+
+window.addEventListener("load", () => {
+    document.querySelector(".hero-img").classList.add("loaded");
+});
