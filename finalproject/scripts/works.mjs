@@ -86,6 +86,9 @@ function displaySpotlights(worksArray) {
     const goToAlbumBtn = document.createElement("button");
     goToAlbumBtn.textContent = `GO TO ALBUM`;
     goToAlbumBtn.setAttribute("id", "go-to-album-btn");
+    goToAlbumBtn.addEventListener('click', function () {
+        window.location.href = "https://fernanda-testing.github.io/wdd231/finalproject/album.html";
+    });
     spotlightsContainer.appendChild(goToAlbumBtn);
 }
 
