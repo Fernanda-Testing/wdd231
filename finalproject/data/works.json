@@ -1,0 +1,445 @@
+{
+    "works": [
+        {
+            "name": "BBQ Access Doors",
+            "IsItOutdoorFurniture": true,
+            "isItWoodWork": true,
+            "sizework": "Medium",
+            "image": "images/bbq-access-doors.webp"
+        },
+        {
+            "name": "BBQ Bar Counter",
+            "IsItOutdoorFurniture": true,
+            "isItWoodWork": true,
+            "sizework": "Medium",
+            "image": "images/bbq-bar-counter.webp"
+        },
+        {
+            "name": "Bedroom Furniture",
+            "IsItOutdoorFurniture": false,
+            "isItWoodWork": true,
+            "sizework": "Medium",
+            "image": "images/bedroom-furniture.webp"
+        },
+        {
+            "name": "Ceiling",
+            "IsItOutdoorFurniture": false,
+            "isItWoodWork": true,
+            "sizework": "Large",
+            "image": "images/ceiling.webp"
+        },
+        {
+            "name": "Closet with 6 doors",
+            "IsItOutdoorFurniture": false,
+            "isItWoodWork": true,
+            "sizework": "Large",
+            "image": "images/closet-one.webp"
+        },
+        {
+            "name": "Closet with 3 doors and 6 drawers",
+            "IsItOutdoorFurniture": false,
+            "isItWoodWork": true,
+            "sizework": "Large",
+            "image": "images/closet-two.webp"
+        },
+        {
+            "name": "Coffee table",
+            "IsItOutdoorFurniture": false,
+            "isItWoodWork": true,
+            "sizework": "Medium",
+            "image": "images/coffee-table.webp"
+        },
+        {
+            "name": "Complete Wooden Kitchen One",
+            "IsItOutdoorFurniture": false,
+            "isItWoodWork": true,
+            "sizework": "Large",
+            "image": "images/complete-wooden-kitchen-one.webp"
+        },
+        {
+            "name": "Complete Wooden Kitchen Two",
+            "IsItOutdoorFurniture": false,
+            "isItWoodWork": true,
+            "sizework": "Large",
+            "image": "images/complete-wooden-kitchen-two.webp"
+        },
+        {
+            "name": "Cradle",
+            "IsItOutdoorFurniture": false,
+            "isItWoodWork": true,
+            "sizework": "Medium",
+            "image": "images/cradle-one.webp"
+        },
+        {
+            "name": "White Cradle",
+            "IsItOutdoorFurniture": false,
+            "isItWoodWork": true,
+            "sizework": "Medium",
+            "image": "images/cradle-two.webp"
+        },
+        {
+            "name": "Deck",
+            "IsItOutdoorFurniture": true,
+            "isItWoodWork": true,
+            "sizework": "Large",
+            "image": "images/deck.webp"
+        },
+        {
+            "name": "Custom Dog House",
+            "IsItOutdoorFurniture": true,
+            "isItWoodWork": true,
+            "sizework": "Small",
+            "image": "images/dog-house-one.webp"
+        },
+        {
+            "name": "Simple Dog House",
+            "IsItOutdoorFurniture": true,
+            "isItWoodWork": true,
+            "sizework": "Small",
+            "image": "images/dog-house-two.webp"
+        },
+        {
+            "name": "Floating Floor",
+            "IsItOutdoorFurniture": false,
+            "isItWoodWork": true,
+            "sizework": "Large",
+            "image": "images/floating-floor.webp"
+        },
+        {
+            "name": "Delicias del Sur",
+            "IsItOutdoorFurniture": "Av. Rivera 2345, Montevideo, Uruguay",
+            "isItWoodWork": "+598 99 123 456",
+            "sizework": "https://www.deliciasdelsur.uy",
+            "image": "images/deliciasdelsur-icon.png"
+        },
+        {
+            "name": "Forniture For Down The Stairs",
+            "IsItOutdoorFurniture": false,
+            "isItWoodWork": true,
+            "sizework": "Medium",
+            "image": "images/furniture-for-down-the-stairs.webp"
+        },
+        {
+            "name": "External Trilage",
+            "IsItOutdoorFurniture": true,
+            "isItWoodWork": true,
+            "sizework": "Medium",
+            "image": "images/external-trilage.webp"
+        },
+        {
+            "name": "Outdoor Armchair Set",
+            "IsItOutdoorFurniture": true,
+            "isItWoodWork": true,
+            "sizework": "Large",
+            "image": "images/outdoor-armchair-set.webp"
+        },
+        {
+            "name": "Outdoor Wooden Armchair",
+            "IsItOutdoorFurniture": true,
+            "isItWoodWork": true,
+            "sizework": "Large",
+            "image": "images/outdoor-wooden-armchair.webp"
+        },
+        {
+            "name": "Plaster Wall",
+            "IsItOutdoorFurniture": false,
+            "isItWoodWork": false,
+            "sizework": "Large",
+            "image": "images/plaster-wall.webp"
+        },
+        {
+            "name": "Complete Work In Plaster",
+            "IsItOutdoorFurniture": false,
+            "isItWoodWork": false,
+            "sizework": "Large",
+            "image": "images/complete-work-in-plaster.webp"
+        },
+        {
+            "name": "Plaster Ceiling",
+            "IsItOutdoorFurniture": false,
+            "isItWoodWork": false,
+            "sizework": "Large",
+            "image": "images/plaster-ceiling.webp"
+        },
+        {
+            "name": "Plaster Structure",
+            "IsItOutdoorFurniture": false,
+            "isItWoodWork": false,
+            "sizework": "Medium",
+            "image": "images/plaster-structure.webp"
+        },
+        {
+            "name": "Shelf",
+            "IsItOutdoorFurniture": false,
+            "isItWoodWork": true,
+            "sizework": "Small",
+            "image": "images/shelf.webp"
+        },
+        {
+            "name": "Sideboard One",
+            "IsItOutdoorFurniture": false,
+            "isItWoodWork": true,
+            "sizework": "Large",
+            "image": "images/sideboard-one.webp"
+        },
+        {
+            "name": "Sideboard Two",
+            "IsItOutdoorFurniture": false,
+            "isItWoodWork": true,
+            "sizework": "Medium",
+            "image": "images/sideboard-two.webp"
+        },
+        {
+            "name": "Sideboard Three",
+            "IsItOutdoorFurniture": false,
+            "isItWoodWork": true,
+            "sizework": "Medium",
+            "image": "images/sideboard-three.webp"
+        },
+        {
+            "name": "Stairs One",
+            "IsItOutdoorFurniture": false,
+            "isItWoodWork": true,
+            "sizework": "Medium",
+            "image": "images/stairs-one.webp"
+        },
+        {
+            "name": "Stairs Two",
+            "IsItOutdoorFurniture": true,
+            "isItWoodWork": true,
+            "sizework": "Small",
+            "image": "images/stairs-two.webp"
+        },
+        {
+            "name": "Stairs Three",
+            "IsItOutdoorFurniture": false,
+            "isItWoodWork": true,
+            "sizework": "Medium",
+            "image": "images/stairs-three.webp"
+        },
+        {
+            "name": "Wood and Iron Table",
+            "IsItOutdoorFurniture": false,
+            "isItWoodWork": true,
+            "sizework": "Medium",
+            "image": "images/table.webp"
+        },
+        {
+            "name": "Wood Toy Truck",
+            "IsItOutdoorFurniture": false,
+            "isItWoodWork": true,
+            "sizework": "Small",
+            "image": "images/toy-truck.webp"
+        },
+        {
+            "name": "Undercounter Cabinete One",
+            "IsItOutdoorFurniture": false,
+            "isItWoodWork": true,
+            "sizework": "Medium",
+            "image": "images/undercounter-cabinete-one.webp"
+        },
+        {
+            "name": "Undercounter Cabinete Two",
+            "IsItOutdoorFurniture": false,
+            "isItWoodWork": true,
+            "sizework": "Medium",
+            "image": "images/undercounter-cabinete-two.webp"
+        },
+        {
+            "name": "Undercounter Cabinete Three",
+            "IsItOutdoorFurniture": false,
+            "isItWoodWork": true,
+            "sizework": "Medium",
+            "image": "images/undercounter-cabinete-three.webp"
+        },
+        {
+            "name": "Undercounter Cabinete Four",
+            "IsItOutdoorFurniture": false,
+            "isItWoodWork": true,
+            "sizework": "Medium",
+            "image": "images/undercounter-cabinete-four.webp"
+        },
+        {
+            "name": "Undercounter Cabinete Five",
+            "IsItOutdoorFurniture": false,
+            "isItWoodWork": true,
+            "sizework": "Medium",
+            "image": "images/undercounter-cabinete-five.webp"
+        },
+        {
+            "name": "Undercounter Cabinete Six",
+            "IsItOutdoorFurniture": false,
+            "isItWoodWork": true,
+            "sizework": "Medium",
+            "image": "images/undercounter-cabinete-six.webp"
+        },
+        {
+            "name": "Undercounter Cabinete Seven",
+            "IsItOutdoorFurniture": false,
+            "isItWoodWork": true,
+            "sizework": "Medium",
+            "image": "images/undercounter-cabinete-seven.webp"
+        },
+        {
+            "name": "Undercounter Cabinete Eight",
+            "IsItOutdoorFurniture": false,
+            "isItWoodWork": true,
+            "sizework": "Medium",
+            "image": "images/undercounter-cabinete-eight.webp"
+        },
+        {
+            "name": "Undercounter Cabinete Nine",
+            "IsItOutdoorFurniture": false,
+            "isItWoodWork": true,
+            "sizework": "Medium",
+            "image": "images/undercounter-cabinete-nine.webp"
+        },
+        {
+            "name": "Undercounter Cabinete Ten",
+            "IsItOutdoorFurniture": false,
+            "isItWoodWork": true,
+            "sizework": "Medium",
+            "image": "images/undercounter-cabinete-ten.webp"
+        },
+        {
+            "name": "Wall And Undercounter Cabinet One",
+            "IsItOutdoorFurniture": false,
+            "isItWoodWork": true,
+            "sizework": "Large",
+            "image": "images/wall-and-undercounter-cabinet-one.webp"
+        },
+        {
+            "name": "Wall And Undercounter Cabinet Two",
+            "IsItOutdoorFurniture": false,
+            "isItWoodWork": true,
+            "sizework": "Large",
+            "image": "images/wall-and-undercounter-cabinet-two.webp"
+        },
+        {
+            "name": "Wall And Undercounter Cabinet Three",
+            "IsItOutdoorFurniture": false,
+            "isItWoodWork": true,
+            "sizework": "Large",
+            "image": "images/wall-and-undercounter-cabinet-three.webp"
+        },
+        {
+            "name": "Wall Cabinet",
+            "IsItOutdoorFurniture": false,
+            "isItWoodWork": true,
+            "sizework": "Medium",
+            "image": "images/wall-cabinet.webp"
+        },
+        {
+            "name": "Pergola on the Facade of a Shop",
+            "IsItOutdoorFurniture": true,
+            "isItWoodWork": true,
+            "sizework": "Large",
+            "image": "images/pergola-on-the facade-of-a-shop.webp"
+        },
+        {
+            "name": "Wooden and Glass Door",
+            "IsItOutdoorFurniture": true,
+            "isItWoodWork": true,
+            "sizework": "Large",
+            "image": "images/wooden-and-glass-door.webp"
+        },
+        {
+            "name": "Wooden Benches",
+            "IsItOutdoorFurniture": true,
+            "isItWoodWork": true,
+            "sizework": "Medium",
+            "image": "images/wooden-benches.webp"
+        },
+        {
+            "name": "Wooden Chest of Drawers One",
+            "IsItOutdoorFurniture": false,
+            "isItWoodWork": true,
+            "sizework": "Medium",
+            "image": "images/wooden-chest-of drawers-one.webp"
+        },
+        {
+            "name": "Wooden Chest of Drawers Two",
+            "IsItOutdoorFurniture": false,
+            "isItWoodWork": true,
+            "sizework": "Medium",
+            "image": "images/wooden-chest-of drawers-two.webp"
+        },
+        {
+            "name": "Wooden Children's House",
+            "IsItOutdoorFurniture": true,
+            "isItWoodWork": true,
+            "sizework": "Large",
+            "image": "images/wooden-children's-house.webp"
+        },
+        {
+            "name": "Wooden Door",
+            "IsItOutdoorFurniture": true,
+            "isItWoodWork": true,
+            "sizework": "Medium",
+            "image": "images/wooden-door.webp"
+        },
+        {
+            "name": "Wooden Doors",
+            "IsItOutdoorFurniture": true,
+            "isItWoodWork": true,
+            "sizework": "Large",
+            "image": "images/wooden-doors.webp"
+        },
+        {
+            "name": "Wooden Lattice",
+            "IsItOutdoorFurniture": false,
+            "isItWoodWork": true,
+            "sizework": "Medium",
+            "image": "images/wooden-lattice.webp"
+        },
+        {
+            "name": "Wooden Matera",
+            "IsItOutdoorFurniture": false,
+            "isItWoodWork": true,
+            "sizework": "Small",
+            "image": "images/wooden-matera.webp"
+        },
+        {
+            "name": "Wooden Pool Deck",
+            "IsItOutdoorFurniture": true,
+            "isItWoodWork": true,
+            "sizework": "Large",
+            "image": "images/wooden-pool-deck-one.webp"
+        },
+        {
+            "name": "Wooden Boxes",
+            "IsItOutdoorFurniture": false,
+            "isItWoodWork": true,
+            "sizework": "Small",
+            "image": "images/wooden-boxes.webp"
+        },
+        {
+            "name": "Functional Children Toy",
+            "IsItOutdoorFurniture": false,
+            "isItWoodWork": true,
+            "sizework": "Small",
+            "image": "images/functional-children-toy.webp"
+        },
+        {
+            "name": "Paitings",
+            "IsItOutdoorFurniture": false,
+            "isItWoodWork": true,
+            "sizework": "Small",
+            "image": "images/paitings.webp"
+        },
+        {
+            "name": "Racecourse Toy",
+            "IsItOutdoorFurniture": false,
+            "isItWoodWork": true,
+            "sizework": "Small",
+            "image": "images/racecourse-toy.webp"
+        },
+        {
+            "name": "Bar Counter",
+            "IsItOutdoorFurniture": false,
+            "isItWoodWork": true,
+            "sizework": "Medium",
+            "image": "images/bar-counter.webp"
+        }
+    ]
+}
