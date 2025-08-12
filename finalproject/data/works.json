@@ -106,13 +106,6 @@
             "image": "images/floating-floor.webp"
         },
         {
-            "name": "Delicias del Sur",
-            "IsItOutdoorFurniture": "Av. Rivera 2345, Montevideo, Uruguay",
-            "isItWoodWork": "+598 99 123 456",
-            "sizework": "https://www.deliciasdelsur.uy",
-            "image": "images/deliciasdelsur-icon.png"
-        },
-        {
             "name": "Forniture For Down The Stairs",
             "IsItOutdoorFurniture": false,
             "isItWoodWork": true,
@@ -232,74 +225,74 @@
             "image": "images/toy-truck.webp"
         },
         {
-            "name": "Undercounter Cabinete One",
+            "name": "Undercounter Cabinet One",
             "IsItOutdoorFurniture": false,
             "isItWoodWork": true,
             "sizework": "Medium",
-            "image": "images/undercounter-cabinete-one.webp"
+            "image": "images/undercounter-cabinet-one.webp"
         },
         {
-            "name": "Undercounter Cabinete Two",
+            "name": "Undercounter Cabinet Two",
             "IsItOutdoorFurniture": false,
             "isItWoodWork": true,
             "sizework": "Medium",
-            "image": "images/undercounter-cabinete-two.webp"
+            "image": "images/undercounter-cabinet-two.webp"
         },
         {
-            "name": "Undercounter Cabinete Three",
+            "name": "Undercounter Cabinet Three",
             "IsItOutdoorFurniture": false,
             "isItWoodWork": true,
             "sizework": "Medium",
-            "image": "images/undercounter-cabinete-three.webp"
+            "image": "images/undercounter-cabinet-three.webp"
         },
         {
-            "name": "Undercounter Cabinete Four",
+            "name": "Undercounter Cabinet Four",
             "IsItOutdoorFurniture": false,
             "isItWoodWork": true,
             "sizework": "Medium",
-            "image": "images/undercounter-cabinete-four.webp"
+            "image": "images/undercounter-cabinet-four.webp"
         },
         {
-            "name": "Undercounter Cabinete Five",
+            "name": "Undercounter Cabinet Five",
             "IsItOutdoorFurniture": false,
             "isItWoodWork": true,
             "sizework": "Medium",
-            "image": "images/undercounter-cabinete-five.webp"
+            "image": "images/undercounter-cabinet-five.webp"
         },
         {
-            "name": "Undercounter Cabinete Six",
+            "name": "Undercounter Cabinet Six",
             "IsItOutdoorFurniture": false,
             "isItWoodWork": true,
             "sizework": "Medium",
-            "image": "images/undercounter-cabinete-six.webp"
+            "image": "images/undercounter-cabinet-six.webp"
         },
         {
-            "name": "Undercounter Cabinete Seven",
+            "name": "Undercounter Cabinet Seven",
             "IsItOutdoorFurniture": false,
             "isItWoodWork": true,
             "sizework": "Medium",
-            "image": "images/undercounter-cabinete-seven.webp"
+            "image": "images/undercounter-cabinet-seven.webp"
         },
         {
-            "name": "Undercounter Cabinete Eight",
+            "name": "Undercounter Cabinet Eight",
             "IsItOutdoorFurniture": false,
             "isItWoodWork": true,
             "sizework": "Medium",
-            "image": "images/undercounter-cabinete-eight.webp"
+            "image": "images/undercounter-cabinet-eight.webp"
         },
         {
-            "name": "Undercounter Cabinete Nine",
+            "name": "Undercounter Cabinet Nine",
             "IsItOutdoorFurniture": false,
             "isItWoodWork": true,
             "sizework": "Medium",
-            "image": "images/undercounter-cabinete-nine.webp"
+            "image": "images/undercounter-cabinet-nine.webp"
         },
         {
-            "name": "Undercounter Cabinete Ten",
+            "name": "Undercounter Cabinet Ten",
             "IsItOutdoorFurniture": false,
             "isItWoodWork": true,
             "sizework": "Medium",
-            "image": "images/undercounter-cabinete-ten.webp"
+            "image": "images/undercounter-cabinet-ten.webp"
         },
         {
             "name": "Wall And Undercounter Cabinet One",
@@ -334,7 +327,7 @@
             "IsItOutdoorFurniture": true,
             "isItWoodWork": true,
             "sizework": "Large",
-            "image": "images/pergola-on-the facade-of-a-shop.webp"
+            "image": "images/pergola-on-the-facade-of-a-shop.webp"
         },
         {
             "name": "Wooden and Glass Door",
@@ -355,14 +348,14 @@
             "IsItOutdoorFurniture": false,
             "isItWoodWork": true,
             "sizework": "Medium",
-            "image": "images/wooden-chest-of drawers-one.webp"
+            "image": "images/wooden-chest-of-drawers-one.webp"
         },
         {
             "name": "Wooden Chest of Drawers Two",
             "IsItOutdoorFurniture": false,
             "isItWoodWork": true,
             "sizework": "Medium",
-            "image": "images/wooden-chest-of drawers-two.webp"
+            "image": "images/wooden-chest-of-drawers-two.webp"
         },
         {
             "name": "Wooden Children's House",
@@ -425,7 +418,7 @@
             "IsItOutdoorFurniture": false,
             "isItWoodWork": true,
             "sizework": "Small",
-            "image": "images/paitings.webp"
+            "image": "images/paintings.webp"
         },
         {
             "name": "Racecourse Toy",

@@ -54,6 +54,10 @@ h3 {
     font-family: "Montserrat", sans-serif;
 }
 
+#album-title {
+    padding: 1.2rem;
+}
+
 #menu {
     background: none;
     border: none;
@@ -185,6 +189,50 @@ picture img {
 .hero-img.loaded {
     opacity: 1;
     filter: brightness(100%);
+}
+
+.spotlight {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.spotlight img {
+    width: 100px;
+    height: auto;
+    object-fit: contain;
+    box-shadow: 0 0 20px black;
+}
+
+.spotlight-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.2rem;
+}
+
+.spotlight-container img {
+    box-shadow: 0 0 20px black;
+}
+
+section h2 {
+    text-align: center;
+}
+
+section {
+    padding: 1.2rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.grid img {
+    box-shadow: 0 0 20px black;
 }
 
 footer {

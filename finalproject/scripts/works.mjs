@@ -1,60 +1,85 @@
-// const url = 'https://byui-cse.github.io/cse-ww-program/data/latter-day-prophets.json';
-// const cards = document.querySelector('#cards');
+const src = "data/works.json";
+const cards = document.querySelector('#cards');
+let worksGlobal = [];
 
-// const getProphetData = async () => {
-//     try {
-//         const response = await fetch(url); // Wait for the fetch to complete
-//         const data = await response.json(); // Wait for the response to be converted to JSON
-//         //console.table(data.prophets); // Output the fetched data
-//         displayProphets(data.prophets);
-//     } catch (error) {
-//         console.error("Error fetching data:", error); // Handle any errors
-//     }
-// };
+const getWorksData = async () => {
+    try {
+        const response = await fetch(src);
+        const data = await response.json();
+        worksGlobal = data.works;
 
-// getProphetData(url);
+        if (document.querySelector("#cards")) {
+            displayWorks(worksGlobal);
+        }
 
-// const displayProphets = (prophets) => {
-//     prophets.forEach((prophet) => {
-//         let card = document.createElement("section");
-//         card.classList.add("prophet-card");
+        if (document.querySelector("#spotlights")) {
+            displaySpotlights(worksGlobal);
+        }
 
-//         let fullName = document.createElement("h2");
+    } catch (error) {
+        console.error("Error fetching data:", error);
+    }
+};
 
-//         let dateOfBirth = document.createElement("p");
-//         let placeOfBirth = document.createElement("p");
+getWorksData();
 
-//         let portrait = document.createElement("img");
+const displayWorks = (worksArray) => {
+    cards.innerHTML = "";
+    cards.classList.add("grid");
+
+    worksArray.forEach((work) => {
+        const card = document.createElement("section");
+        card.classList.add("companie-card");
+
+        const photo = document.createElement("img");
+        photo.setAttribute("src", work.image);
+        photo.setAttribute("alt", `${work.name}`);
+        photo.setAttribute("loading", "lazy");
+        photo.setAttribute("width", "200");
+        photo.setAttribute("height", "200");
+
+        const name = document.createElement("h3");
+        name.textContent = work.name;
+
+        card.appendChild(photo);
+        card.appendChild(name);
+
+        cards.appendChild(card);
+    });
+};
 
 
-//         fullName.textContent = `${prophet.name} ${prophet.lastname}`;
+function getRandomWorks(worksArray, count) {
+    const shuffled = [...worksArray].sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, count);
+}
 
-//         dateOfBirth.textContent = `Date of Birth: ${prophet.birthdate}`;
-//         placeOfBirth.textContent = `Place of Birth: ${prophet.birthplace}`;
+function displaySpotlights(worksArray) {
+    const spotlightsContainer = document.querySelector("#spotlights");
+    spotlightsContainer.innerHTML = "";
 
-//         portrait.setAttribute("src", prophet.imageurl);
-//         portrait.setAttribute("alt", `Portrait of ${prophet.name} ${prophet.lastname}`);
-//         portrait.setAttribute("loading", "lazy");
-//         portrait.setAttribute("width", "170");
-//         portrait.setAttribute("height", "220");
+    const filteredWorks = worksArray.filter(work =>
+        work.sizework === "Large" || work.sizework === "Medium"
+    );
 
-//         // Append the section(card) with the created elements
+    const selectedWorks = getRandomWorks(filteredWorks, 3);
 
-//         card.appendChild(fullName);
-//         card.appendChild(dateOfBirth);
-//         card.appendChild(placeOfBirth);
-//         card.appendChild(portrait);
+    selectedWorks.forEach(work => {
+        const spotlightCard = document.createElement("section");
+        spotlightCard.classList.add("work-card", "spotlights");
 
-//         cards.appendChild(card);
+        const img = document.createElement("img");
+        img.src = work.image;
+        img.alt = `${work.name}`;
+        img.width = 200;
+        img.height = 200;
+        img.loading = "lazy";
 
-//     });
-// }
+        const name = document.createElement("h3");
+        name.textContent = work.name;
 
-// // otra manera:
-// // async function getProphetData() {
-// //     const response = await fetch(url);
-// //     const data = await response.json();
-// //     console.table(data.prophets); // temporary testing of data response
-// // }
-
-// // getProphetData();
+        spotlightCard.appendChild(img);
+        spotlightCard.appendChild(name);
+        spotlightsContainer.appendChild(spotlightCard);
+    });
+}
