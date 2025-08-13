@@ -92,7 +92,8 @@ h3 {
     flex-direction: column;
 }
 
-.pages ul {
+.pages,
+.nav-filters ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -103,23 +104,32 @@ li {
 }
 
 .pages a:link,
-.pages a:visited {
+.pages a:visited,
+.nav-filters a:link,
+.nav-filters a:visited {
     display: block;
     padding: 8px;
     text-decoration: none;
     color: var(--text-color);
 }
 
-.pages a.active {
+.pages a.active,
+.nav-filters a.active {
     color: var(--primary-color);
     font-weight: bold;
     border-bottom: double 1px;
 }
 
-.pages a:hover {
+.pages a:hover,
+.nav-filters a:hover {
     box-shadow: 0 0 20px black;
     padding: 8px;
     cursor: pointer;
+}
+
+.nav-filters {
+    display: flex;
+    flex-direction: column;
 }
 
 .main-content {

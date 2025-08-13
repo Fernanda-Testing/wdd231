@@ -39,8 +39,17 @@
     }
 
     .pages a:link,
-    .pages a:visited {
+    .pages a:visited,
+    .nav-filters a:link,
+    .nav-filters a:visited {
         border-right: solid 1px;
+    }
+
+    .nav-filters {
+        display: flex;
+        flex-direction: row;
+        gap: 32px;
+        justify-content: flex-end;
     }
 
     .main-content {
