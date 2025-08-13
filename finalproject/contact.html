@@ -21,7 +21,7 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=Montserrat&display=swap"
         rel="stylesheet">
     <link rel="icon" href="favicon.ico">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 </head>
 
 <body>
@@ -59,26 +59,27 @@
                 <h2>Ask for a quote</h2>
                 <label>NAME *: <input type="text" name="name" required autocomplete="given-name"
                         title="Your Name"></label>
-                <label>COMPANY NAME: <input type="text" name="company-name" autocomplete="company-name"
+                <label>COMPANY NAME: <input type="text" name="company" autocomplete="company-name"
                         title="Your Company Name"></label>
                 <label>EMAIL ADDRESS *: <input type="email" name="email" required placeholder="example@gmail.com"
                         title="Your Email Address" autocomplete="email"></label>
-                <label>CELPHONE *: <input type="tel" name="phone" required autocomplete="tel" inputmode="numeric" pattern="\d+"
-                        title="Your Celphone number. Only numbers are allowed." placeholder="091-111-111"></label>
-                <div class="message-box"><label for="message">QUOTE REQUEST DESCRIPTION *: <br>
+                <label>CELPHONE *: <input type="tel" name="phone" required autocomplete="tel" inputmode="numeric"
+                        pattern="\d+" title="Your Celphone number. Only numbers are allowed."
+                        placeholder="091-111-111"></label>
+                <div class="message-box"><label for="area-message-desc">QUOTE REQUEST DESCRIPTION *: <br>
                         <textarea id="area-message-desc" required name="area-message-desc" rows="4"
                             title="Your quote request description"></textarea></label>
                 </div>
                 <input type="submit" value="SEND REQUEST">
             </form>
 
-            <img src="images/carpenter.webp" alt="carpenter-working" width="438.5" height="620">
+            <img src="images/carpenter.webp" alt="carpenter-working" width="439" height="620">
 
             <form method="GET" action="thankyou-two.html" class="designOne">
                 <h2>Give rating</h2>
                 <label>NAME *: <input type="text" name="name" required autocomplete="given-name"
                         title="Your Name"></label>
-                <div class="message-box"><label for="message">COMMENTS: <br>
+                <div class="message-box"><label for="area-rating-desc">COMMENTS: <br>
                         <textarea id="area-rating-desc" name="area-rating-desc" rows="4"
                             title="Your comments for us"></textarea></label>
                 </div>
@@ -114,7 +115,8 @@
             <p>&copy;<span id="currentyear"></span> CARPINTERÍA MOA - Abayubá Borges</p>
             <p><strong>Address:</strong> Dr. Alberto Boerger 534, 37000 Melo, Cerro Largo, Uruguay</p>
             <p><strong>Celphone:</strong> (+598) 91 338 735</p>
-            <p><strong>Hours:</strong> Open Monday to Friday from 8 a.m. to 6 p.m. | Saturday: 8 a.m. to 12:30 p.m. | Sunday: Closed</p>
+            <p><strong>Hours:</strong> Open Monday to Friday from 8 a.m. to 6 p.m. | Saturday: 8 a.m. to 12:30 p.m. |
+                Sunday: Closed</p>
         </div>
 
     </footer>
