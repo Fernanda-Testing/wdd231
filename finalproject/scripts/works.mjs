@@ -72,9 +72,14 @@ function displaySpotlights(worksArray) {
         const img = document.createElement("img");
         img.src = work.image;
         img.alt = `${work.name}`;
+        img.classList.add("clickable-img");
         img.width = 200;
         img.height = 200;
         img.loading = "lazy";
+
+        img.addEventListener("click", () => {
+            openModalFromImage(work.image, work.name);
+        });
 
         const name = document.createElement("h3");
         name.textContent = work.name;
