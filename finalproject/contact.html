@@ -57,16 +57,16 @@
         <div class="main-content-contact">
             <form method="GET" action="thankyou.html" class="designOne">
                 <h2>Ask for a quote</h2>
-                <label>NAME: <input type="text" name="name" required autocomplete="given-name"
+                <label>NAME *: <input type="text" name="name" required autocomplete="given-name"
                         title="Your Name"></label>
                 <label>COMPANY NAME: <input type="text" name="company-name" autocomplete="company-name"
                         title="Your Company Name"></label>
-                <label>EMAIL ADDRESS: <input type="email" name="email" required placeholder="example@gmail.com"
+                <label>EMAIL ADDRESS *: <input type="email" name="email" required placeholder="example@gmail.com"
                         title="Your Email Address" autocomplete="email"></label>
-                <label>CELPHONE: <input type="tel" name="phone" required autocomplete="tel"
+                <label>CELPHONE *: <input type="tel" name="phone" required autocomplete="tel"
                         title="A Celphone Number with dashes" placeholder="091-111-111"></label>
-                <div class="message-box"><label for="message">QUOTE REQUEST DESCRIPTION: <br>
-                        <textarea id="area-message-desc" name="area-message-desc" rows="4"
+                <div class="message-box"><label for="message">QUOTE REQUEST DESCRIPTION *: <br>
+                        <textarea id="area-message-desc" required name="area-message-desc" rows="4"
                             title="Your quote request description"></textarea></label>
                 </div>
                 <input type="submit" value="SEND REQUEST">
@@ -76,7 +76,7 @@
 
             <form method="GET" action="thankyou-two.html" class="designOne">
                 <h2>Give rating</h2>
-                <label>NAME: <input type="text" name="name" required autocomplete="given-name"
+                <label>NAME *: <input type="text" name="name" required autocomplete="given-name"
                         title="Your Name"></label>
                 <div class="message-box"><label for="message">COMMENTS: <br>
                         <textarea id="area-rating-desc" name="area-rating-desc" rows="4"
