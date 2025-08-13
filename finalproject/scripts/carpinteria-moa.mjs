@@ -7,16 +7,24 @@ const today = new Date();
 
 currentYear.innerHTML = `<span class="highlight">${today.getFullYear()}</span>`;
 
-// if (hamButton && pages) {
-//     hamButton.addEventListener('click', () => {
-//         pages.classList.toggle('open');
-//         hamButton.classList.toggle('open');
-//     });
-// }
 hamButton.addEventListener('click', () => {
-    pages.classList.toggle('open');
-    hamButton.classList.toggle('open');
+
+    if (window.innerWidth < 900) {
+        pages.classList.toggle('open');
+        hamButton.classList.toggle('open');
+    }
 });
+
+function handleResize() {
+    if (window.innerWidth >= 900) {
+        pages.classList.remove('open');
+        hamButton.classList.remove('open');
+    }
+}
+
+window.addEventListener('resize', handleResize);
+window.addEventListener('load', handleResize);
+
 
 window.addEventListener("load", () => {
     document.querySelector(".hero-img", "spotlight - container img").classList.add("loaded");
