@@ -7,12 +7,16 @@ const today = new Date();
 
 currentYear.innerHTML = `<span class="highlight">${today.getFullYear()}</span>`;
 
-if (hamButton && pages) {
-    hamButton.addEventListener('click', () => {
-        pages.classList.toggle('open');
-        hamButton.classList.toggle('open');
-    });
-}
+// if (hamButton && pages) {
+//     hamButton.addEventListener('click', () => {
+//         pages.classList.toggle('open');
+//         hamButton.classList.toggle('open');
+//     });
+// }
+hamButton.addEventListener('click', () => {
+    pages.classList.toggle('open');
+    hamButton.classList.toggle('open');
+});
 
 window.addEventListener("load", () => {
     document.querySelector(".hero-img", "spotlight - container img").classList.add("loaded");
