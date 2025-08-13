@@ -35,7 +35,7 @@ const displayWorks = (worksArray) => {
         photo.setAttribute("src", work.image);
         photo.setAttribute("alt", `${work.name}`);
         photo.setAttribute("loading", "lazy");
-        photo.setAttribute("width", "200");
+        photo.setAttribute("width", "250");
         photo.setAttribute("height", "200");
 
         photo.addEventListener("click", () => openModal(work)); //new line
@@ -73,7 +73,7 @@ function displaySpotlights(worksArray) {
         img.src = work.image;
         img.alt = `${work.name}`;
         img.classList.add("clickable-img");
-        img.width = 200;
+        img.width = 250;
         img.height = 200;
         img.loading = "lazy";
 
