@@ -38,6 +38,8 @@ const displayWorks = (worksArray) => {
         photo.setAttribute("width", "200");
         photo.setAttribute("height", "200");
 
+        photo.addEventListener("click", () => openModal(work)); //new line
+
         const name = document.createElement("h3");
         name.textContent = work.name;
 
@@ -47,7 +49,6 @@ const displayWorks = (worksArray) => {
         cards.appendChild(card);
     });
 };
-
 
 function getRandomWorks(worksArray, count) {
     const shuffled = [...worksArray].sort(() => 0.5 - Math.random());
@@ -136,3 +137,32 @@ setupFilter("large", "sizework", "Large");
 setupFilter("indoor", "IsItOutdoorFurniture", false);
 setupFilter("outdoor", "IsItOutdoorFurniture", true);
 setupFilter("all-works", "all", null);
+
+const dialogBox = document.querySelector("#dialogBox");
+const dialogTitle = dialogBox.querySelector("h2");
+const dialogImg = dialogBox.querySelector("img");
+const closeButton = dialogBox.querySelector("button");
+
+function openModal(work) {
+    const imageContainer = dialogBox.querySelector("#dialog-image-container");
+    imageContainer.innerHTML = '';
+
+    dialogTitle.textContent = work.name;
+
+    const photo = document.createElement("img");
+    photo.setAttribute("src", work.image);
+    photo.setAttribute("alt", `${work.name}`);
+    photo.setAttribute("loading", "lazy");
+    photo.setAttribute("width", "100%");
+    photo.setAttribute("height", "auto");
+    photo.setAttribute("display", "block");
+    photo.setAttribute("margin", "0 auto");
+
+    imageContainer.appendChild(photo);
+
+    dialogBox.showModal();
+}
+
+closeButton.addEventListener("click", () => {
+    dialogBox.close();
+});

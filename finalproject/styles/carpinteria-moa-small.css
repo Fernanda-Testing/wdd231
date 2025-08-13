@@ -255,6 +255,54 @@ section {
     box-shadow: 0 0 20px black;
 }
 
+#dialogBox {
+    max-height: auto;
+    border: none;
+    border-radius: 8px;
+    padding: 1rem;
+    max-width: 50%;
+    overflow-wrap: anywhere;
+    background-color: var(--heading-color);
+    color: var(--background-color);
+}
+
+#dialogBox::backdrop {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#dialog-image-container {
+    margin: 20px 0;
+    text-align: center;
+    overflow: hidden
+}
+
+#dialogBox img {
+    max-height: 50%;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#dialogBox h2 {
+    color: var(--background-color);
+}
+
+#title-and-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+#dialogBox button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    cursor: pointer;
+    font-family: Verdana;
+    padding: 5px 10px;
+}
+
 #map {
     height: 400px;
     width: 100%;
