@@ -8,6 +8,10 @@
     box-sizing: border-box;
 }
 
+p {
+    text-decoration: none;
+}
+
 html,
 body {
     max-width: 100%;
@@ -450,4 +454,5 @@ footer {
     background-color: var(--heading-color);
     color: var(--background-color);
     line-height: 1.2rem;
+    text-decoration: none;
 }
