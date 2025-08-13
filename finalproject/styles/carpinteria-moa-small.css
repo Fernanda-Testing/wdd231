@@ -221,7 +221,7 @@ picture img {
     flex-direction: column;
     justify-content: center;
     gap: 1.2rem;
-    align-items: anchor-center;
+    align-items: center;
 }
 
 .spotlight-container img {
