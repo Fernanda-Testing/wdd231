@@ -253,6 +253,29 @@ section {
     box-shadow: 0 0 20px black;
 }
 
+#map {
+    height: 400px;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.stars {
+    display: inline-block;
+}
+
+.star {
+    font-size: 2rem;
+    color: var(--typeface-color);
+    cursor: pointer;
+    transition: color 0.2s;
+    user-select: none;
+}
+
+.star.hover,
+.star.selected {
+    color: gold;
+}
+
 footer {
     display: flex;
     text-align: center;

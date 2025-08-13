@@ -21,6 +21,7 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=Montserrat&display=swap"
         rel="stylesheet">
     <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 
 <body>
@@ -49,7 +50,17 @@
 
     <main>
         <h1>Contact</h1>
+        <h2>Our Location</h2>
+        <div id="map"></div>
+        <div class="stars" id="starRating">
+            <span class="star" data-value="1">&#9733;</span>
+            <span class="star" data-value="2">&#9733;</span>
+            <span class="star" data-value="3">&#9733;</span>
+            <span class="star" data-value="4">&#9733;</span>
+            <span class="star" data-value="5">&#9733;</span>
+        </div>
 
+        <p>Selected Rating: <span id="ratingValue">0</span> stars</p>
 
     </main>
 
@@ -76,6 +87,9 @@
 
     </footer>
     <script type="module" src="scripts/carpinteria-moa.mjs"></script>
+    <script type="module" src="scripts/rating.mjs"></script>
+    <script type="module" src="scripts/location.mjs"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 </body>
 
 </html>
