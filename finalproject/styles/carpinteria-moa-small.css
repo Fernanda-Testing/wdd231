@@ -221,6 +221,7 @@ picture img {
     flex-direction: column;
     justify-content: center;
     gap: 1.2rem;
+    align-items: anchor-center;
 }
 
 .spotlight-container img {
@@ -233,6 +234,7 @@ section h2 {
 
 section {
     padding: 1.2rem;
+    text-align: center;
 }
 
 .content-sections {
@@ -261,10 +263,13 @@ section {
 
 .stars {
     display: inline-block;
+    color: gold;
+    font-size: 1.5rem;
+    padding: .5rem;
 }
 
 .star {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: var(--typeface-color);
     cursor: pointer;
     transition: color 0.2s;
