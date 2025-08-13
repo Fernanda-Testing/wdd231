@@ -78,6 +78,14 @@
         align-items: center;
     }
 
+    #dialogBox h2 {
+        font-size: 1.5rem;
+    }
+
+    #dialogBox button {
+        font-size: 1.5rem;
+    }
+
     footer {
         padding: 8px 24px;
         line-height: 5px;

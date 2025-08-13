@@ -284,6 +284,7 @@ section {
 
 #dialogBox h2 {
     color: var(--background-color);
+    font-size: medium;
 }
 
 #title-and-btn {
@@ -296,7 +297,7 @@ section {
 #dialogBox button {
     background: none;
     border: none;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: var(--primary-color);
     cursor: pointer;
     font-family: Verdana;
