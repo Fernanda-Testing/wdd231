@@ -345,6 +345,8 @@ section {
     display: flex;
     flex-direction: column;
     padding: 1.2rem;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #carpenter::before {

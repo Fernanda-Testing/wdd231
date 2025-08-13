@@ -97,6 +97,7 @@
 
     .main-content-contact {
         flex-direction: row;
+        align-items: flex-start;
     }
 
     footer {
