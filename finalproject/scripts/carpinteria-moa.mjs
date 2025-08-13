@@ -25,7 +25,8 @@ function handleResize() {
 window.addEventListener('resize', handleResize);
 window.addEventListener('load', handleResize);
 
-
 window.addEventListener("load", () => {
-    document.querySelector(".hero-img", "spotlight - container img").classList.add("loaded");
+    document
+        .querySelectorAll(".hero-img, .main-content-contact img")
+        .forEach(img => img.classList.add("loaded"));
 });

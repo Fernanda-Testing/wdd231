@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:description"
-        content="Carpintería MOA creates custom wood furniture and decks for homes and outdoor spaces. From small pieces to large projects, we also offer drywall and finishing services. Request your free quote today.">
+        content="Carpintería MOA Contact page includes contact and location information. Allows visitors to send us a message to request a quote and leave a rating for our services.">
     <meta property="og:image"
         content="https://fernanda-testing.github.io/wdd231/finalproject/images/main-home-carpinteria-moa.webp">
     <meta property="og:title" content="WDD231 | Home | CARPINTERÍA MOA">
@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="styles/carpinteria-moa-larger.css">
     <meta name="author" content="Fernanda Souza">
     <meta name="description"
-        content="Carpintería MOA creates custom wood furniture and decks for homes and outdoor spaces. From small pieces to large projects, we also offer drywall and finishing services. Request your free quote today.">
+        content="Carpintería MOA Contact page includes contact and location information. Allows visitors to send us a message to request a quote and leave a rating for our services.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=Montserrat&display=swap"
@@ -52,16 +52,48 @@
         <h1>Contact</h1>
         <h2>Our Location</h2>
         <div id="map"></div>
-        <div class="stars" id="starRating">
-            <span class="star" data-value="1">&#9733;</span>
-            <span class="star" data-value="2">&#9733;</span>
-            <span class="star" data-value="3">&#9733;</span>
-            <span class="star" data-value="4">&#9733;</span>
-            <span class="star" data-value="5">&#9733;</span>
+
+        <p id="carpenter"><strong>CARPENTER:</strong> Abayubá Borges | <strong>CELPHONE:</strong> +598 91 338 735</p>
+        <div class="main-content-contact">
+            <form method="GET" action="thankyou.html" class="designOne">
+                <h2>Ask for a quote</h2>
+                <label>NAME: <input type="text" name="name" required autocomplete="given-name"
+                        title="Your Name"></label>
+                <label>COMPANY NAME: <input type="text" name="company-name" autocomplete="company-name"
+                        title="Your Company Name"></label>
+                <label>EMAIL ADDRESS: <input type="email" name="email" required placeholder="example@gmail.com"
+                        title="Your Email Address" autocomplete="email"></label>
+                <label>CELPHONE: <input type="tel" name="phone" required autocomplete="tel"
+                        title="A Celphone Number with dashes" placeholder="091-111-111"></label>
+                <div class="message-box"><label for="message">QUOTE REQUEST DESCRIPTION: <br>
+                        <textarea id="area-message-desc" name="area-message-desc" rows="4"
+                            title="Your quote request description"></textarea></label>
+                </div>
+                <input type="submit" value="SEND REQUEST">
+            </form>
+
+            <img src="images/carpenter.webp" alt="carpenter-working" width="219.25" height="310">
+
+            <form method="GET" action="thankyou-two.html" class="designOne">
+                <h2>Give rating</h2>
+                <label>NAME: <input type="text" name="name" required autocomplete="given-name"
+                        title="Your Name"></label>
+                <div class="message-box"><label for="message">COMMENTS: <br>
+                        <textarea id="area-rating-desc" name="area-rating-desc" rows="4"
+                            title="Your comments for us"></textarea></label>
+                </div>
+                <div class="stars" id="starRating">
+                    <span class="star" data-value="1">&#9733;</span>
+                    <span class="star" data-value="2">&#9733;</span>
+                    <span class="star" data-value="3">&#9733;</span>
+                    <span class="star" data-value="4">&#9733;</span>
+                    <span class="star" data-value="5">&#9733;</span>
+                </div>
+
+                <p>Selected Rating: <span id="ratingValue">0</span> stars</p>
+                <input type="submit" value="GOVE RATING">
+            </form>
         </div>
-
-        <p>Selected Rating: <span id="ratingValue">0</span> stars</p>
-
     </main>
 
     <footer>
@@ -86,10 +118,10 @@
         </div>
 
     </footer>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script type="module" src="scripts/carpinteria-moa.mjs"></script>
     <script type="module" src="scripts/rating.mjs"></script>
     <script type="module" src="scripts/location.mjs"></script>
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 </body>
 
 </html>

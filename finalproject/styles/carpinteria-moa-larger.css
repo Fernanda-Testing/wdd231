@@ -95,6 +95,10 @@
         flex-direction: row;
     }
 
+    .main-content-contact {
+        flex-direction: row;
+    }
+
     footer {
         padding: 8px 24px;
         line-height: 5px;

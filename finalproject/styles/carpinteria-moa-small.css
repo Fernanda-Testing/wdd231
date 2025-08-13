@@ -198,14 +198,15 @@ picture img {
     box-shadow: 0 0 20px black;
 }
 
-.hero-img {
+.hero-img,
+.main-content-contact img {
     opacity: 0;
     filter: brightness(50%);
     transition: opacity 1.5s ease, filter 1.5s ease;
 }
 
 .hero-img.loaded,
-.spotlight-container img.loaded {
+.main-content-contact img.loaded {
     opacity: 1;
     filter: brightness(100%);
 }
@@ -334,6 +335,88 @@ section {
     height: 400px;
     width: 100%;
     margin-bottom: 1rem;
+}
+
+.main-content-contact {
+    display: flex;
+    flex-direction: column;
+    padding: 1.2rem;
+}
+
+#carpenter::before {
+    content: "👷";
+}
+
+form {
+    margin: 1rem 2%;
+}
+
+form label {
+    display: block;
+    color: var(--primary-color);
+    padding-top: .2rem;
+    margin-bottom: .2rem;
+}
+
+form input[type="text"],
+form input[type="tel"],
+form input[type="date"],
+form input[type="email"],
+form select {
+    display: block;
+    margin: .1rem 0 1rem 0;
+    padding: .3rem;
+    border: 1px solid var(--text-color);
+    border-radius: 4px;
+    border-left-width: 3px;
+    border-left-color: var(--primary-color);
+    font-size: 1rem;
+    color: var(--text-color);
+    width: 280px;
+}
+
+form input:required {
+    border-left-color: #d70000;
+}
+
+form input:focus {
+    border-left-color: var(--text-color);
+    outline: none;
+}
+
+form input:required:valid {
+    border-left-color: green;
+}
+
+form input[type="submit"] {
+    padding: 12px 36px;
+    background-color: var(--typeface-color);
+    color: var(--background-color);
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    box-shadow: 0 0 20px black;
+    text-decoration: none;
+    width: 280px;
+}
+
+form input[type=submit]:hover {
+    background-color: var(--heading-color);
+    color: var(--background-color);
+    cursor: pointer;
+}
+
+form textarea {
+    width: 280px;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    resize: vertical;
+    word-wrap: break-word;
+}
+
+form #business-description {
+    margin: 1rem 0 0;
 }
 
 .stars {
