@@ -8,6 +8,12 @@
     box-sizing: border-box;
 }
 
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 body {
     background-color: var(--background-color);
     color: var(--typeface-color);
@@ -87,6 +93,8 @@ h3 {
 .nav-filters a {
     display: block;
     text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .pages.open,
@@ -228,13 +236,9 @@ picture img {
     box-shadow: 0 0 20px black;
 }
 
-section h2 {
-    text-align: center;
-}
-
 section {
-    padding: 1.2rem;
     text-align: center;
+    padding: 1.2rem;
 }
 
 .content-sections {
@@ -306,6 +310,25 @@ section {
 
 #tip::before {
     content: "💡";
+}
+
+.next-project-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    justify-content: center;
+    padding: 8px;
+    align-items: center;
+}
+
+.next-project-content img {
+    display: block;
+    box-shadow: 0 0 20px black;
+}
+
+#next-project::before {
+    content: "👉";
 }
 
 #map {

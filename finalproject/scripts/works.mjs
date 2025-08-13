@@ -140,7 +140,6 @@ setupFilter("all-works", "all", null);
 
 const dialogBox = document.querySelector("#dialogBox");
 const dialogTitle = dialogBox.querySelector("h2");
-const dialogImg = dialogBox.querySelector("img");
 const closeButton = dialogBox.querySelector("button");
 
 function openModal(work) {
@@ -162,6 +161,31 @@ function openModal(work) {
 
     dialogBox.showModal();
 }
+
+function openModalFromImage(src, alt) {
+    const imageContainer = dialogBox.querySelector("#dialog-image-container");
+    imageContainer.innerHTML = '';
+
+    dialogTitle.textContent = alt;
+
+    const photo = document.createElement("img");
+    photo.src = src;
+    photo.alt = alt;
+    photo.loading = "lazy";
+    photo.style.width = "100%";
+    photo.style.height = "auto";
+    photo.style.display = "block";
+    photo.style.margin = "0 auto";
+
+    imageContainer.appendChild(photo);
+    dialogBox.showModal();
+}
+
+document.querySelectorAll(".clickable-img").forEach(img => {
+    img.addEventListener("click", () => {
+        openModalFromImage(img.src, img.alt);
+    });
+});
 
 closeButton.addEventListener("click", () => {
     dialogBox.close();
