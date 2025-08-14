@@ -73,7 +73,7 @@ h3 {
     background: none;
     border: none;
     font-size: 2.5rem;
-    color: var(--primary-color);
+    color: var(--background-color);
     cursor: pointer;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     position: absolute;
@@ -130,7 +130,6 @@ li {
 
 .pages a.active,
 .nav-filters a.active {
-    color: var(--primary-color);
     font-weight: bold;
     border-bottom: double 1px;
 }
@@ -189,7 +188,6 @@ picture img {
 #see-more-btn:hover {
     background-color: var(--heading-color);
     color: var(--background-color);
-    cursor: pointer;
 }
 
 .social-pages a {
@@ -306,7 +304,7 @@ section {
     background: none;
     border: none;
     font-size: 1.2rem;
-    color: var(--primary-color);
+    color: var(--background-color);
     cursor: pointer;
     font-family: Verdana;
     padding: 5px 10px;
@@ -409,7 +407,6 @@ form input[type="submit"] {
 form input[type=submit]:hover {
     background-color: var(--heading-color);
     color: var(--background-color);
-    cursor: pointer;
 }
 
 form textarea {
