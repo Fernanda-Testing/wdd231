@@ -449,6 +449,14 @@ form textarea {
     content: "🔸";
 }
 
+.clickable-img {
+    box-shadow: 0 0 20px black;
+}
+
+.formTimestamp {
+    box-sizing: border-box;
+}
+
 footer {
     display: flex;
     text-align: center;
