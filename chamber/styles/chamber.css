@@ -438,6 +438,7 @@ form #business-description {
     opacity: 0;
     animation: cardEntrance 0.8s ease-out forwards;
 }
+
 /* -------- ANIMATIONS --------- */
 
 @keyframes cardEntrance {
@@ -540,6 +541,31 @@ input[type="submit"]:focus {
     margin: 1rem 2%;
     border: 1px solid var(--primary-color);
     border-radius: 8px;
+}
+
+/***********DISCOVER PAGE***********/
+
+#allplaces div {
+    margin: 1rem 8px;
+    border: solid var(--text-color);
+    background-color: var(--background-color);
+    border-radius: 8px;
+}
+
+#allplaces div h2 {
+    margin: 1rem 10px;
+}
+
+#allplaces div img {
+    width: 100%;
+}
+
+#allplaces div p {
+    margin: 1rem 10px;
+}
+
+#allplaces div address {
+    margin: 1rem 10px;
 }
 
 /***********FOOTER***********/
