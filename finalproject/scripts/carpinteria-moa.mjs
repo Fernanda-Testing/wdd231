@@ -30,3 +30,10 @@ window.addEventListener("load", () => {
         .querySelectorAll(".hero-img, .main-content-contact img")
         .forEach(img => img.classList.add("loaded"));
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const tsField = document.getElementById("formTimestamp");
+    if (tsField) {
+        tsField.value = new Date().toLocaleString();
+    }
+});

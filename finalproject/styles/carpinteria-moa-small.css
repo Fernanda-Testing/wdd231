@@ -445,6 +445,10 @@ form textarea {
     color: gold;
 }
 
+#results li::before {
+    content: "🔸";
+}
+
 footer {
     display: flex;
     text-align: center;
