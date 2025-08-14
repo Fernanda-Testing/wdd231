@@ -32,7 +32,7 @@ window.addEventListener("load", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-    const tsField = document.getElementById("formTimestamp");
+    const tsField = document.querySelector(".formTimestamp");
     if (tsField) {
         tsField.value = new Date().toLocaleString();
     }

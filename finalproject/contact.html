@@ -55,7 +55,7 @@
 
         <p id="carpenter"><strong>CARPENTER:</strong> Abayubá Borges | <strong>CELPHONE:</strong> (+598) 91 338 735</p>
         <div class="main-content-contact">
-            <form method="GET" action="thankyou.html" class="designOne">
+            <form method="GET" action="thankyou.html">
                 <h2>Ask for a quote</h2>
                 <label>NAME *: <input type="text" name="name" required autocomplete="given-name"
                         title="Your Name"></label>
@@ -69,20 +69,25 @@
                         <textarea id="area-message-desc" required name="area-message-desc" rows="4"
                             title="Your quote request description"></textarea></label>
                 </div>
-                <input type="hidden" id="formTimestamp" name="formTimestamp">
+                <input type="hidden" class="formTimestamp" name="formTimestamp">
                 <input type="submit" value="SEND REQUEST">
             </form>
 
             <img src="images/carpenter.webp" alt="carpenter-working" width="439" height="620">
 
-            <form method="GET" action="thankyou-two.html" class="designOne">
+            <form method="GET" action="thankyou-by-rating.html" id="ratingForm">
                 <h2>Give rating</h2>
-                <label>NAME *: <input type="text" name="name" required autocomplete="given-name"
-                        title="Your Name"></label>
-                <div class="message-box"><label for="area-rating-desc">COMMENTS: <br>
-                        <textarea id="area-rating-desc" name="area-rating-desc" rows="4"
-                            title="Your comments for us"></textarea></label>
+
+                <label for="ratingName">NAME *:</label>
+                <input type="text" id="ratingName" name="name" required autocomplete="given-name" title="Your Name">
+
+                <div class="message-box">
+                    <label for="area-rating-desc">COMMENTS: <br>
+                        <textarea id="area-rating-desc" name="comments" rows="4"
+                            title="Your comments for us"></textarea>
+                    </label>
                 </div>
+
                 <div class="stars" id="starRating">
                     <span class="star" data-value="1">&#9733;</span>
                     <span class="star" data-value="2">&#9733;</span>
@@ -92,8 +97,13 @@
                 </div>
 
                 <p>Selected Rating: <span id="ratingValue">0</span> stars</p>
+
+                <input type="hidden" name="rating" id="hiddenRatingValue">
+                <input type="hidden" class="formTimestamp" name="timestamp">
+
                 <input type="submit" value="GIVE RATING">
             </form>
+
         </div>
     </main>
 
